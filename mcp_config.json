@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/modelcontextprotocol/servers/main/schema/mcp-config.schema.json",
+  "mcpServers": {
+    "image-scoring": {
+      "command": "python",
+      "args": ["-m", "modules.mcp_server"],
+      "cwd": "d:\\Projects\\image-scoring",
+      "env": {
+        "PYTHONPATH": "d:\\Projects\\image-scoring"
+      }
+    }
+  }
+}
+
