@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__filesystem__list_directory",
+      "mcp__filesystem__directory_tree",
+      "Bash(wc -l modules/*.py)",
+      "Bash(xargs wc -l)",
+      "Bash(ls tests/test_*.py)",
+      "Bash(grep -r \"secrets\\\\|password\\\\|api_key\\\\|token\" modules/*.py --include=\"*.py\")",
+      "Bash(grep -n \"TODO\\\\|FIXME\\\\|BUG\\\\|HACK\" modules/*.py)",
+      "Bash(grep -n \"except:\" D:/Projects/image-scoring/modules/*.py)",
+      "Bash(grep -r \"print\\(.*password\\\\|print\\(.*secret\\\\|print\\(.*token\\\\|print\\(.*apikey\" D:/Projects/image-scoring/modules/*.py)",
+      "Bash(python -m pytest tests/test_db_security.py tests/test_api_security.py tests/test_config_secrets.py tests/test_score_normalization.py -v --tb=short)",
+      "Bash(python -m pytest tests/test_phases_db.py tests/test_events.py tests/test_export.py tests/test_init_db.py tests/test_stacks.py tests/test_ddl.py -v --tb=short)",
+      "Bash(python -m pytest tests/test_phases_db.py tests/test_export.py tests/test_init_db.py tests/test_stacks.py tests/test_ddl.py tests/test_resolved_paths.py -v --tb=short)",
+      "Bash(python -m pytest tests/test_phases_db.py tests/test_export.py tests/test_init_db.py -v --tb=short)"
+    ]
+  }
+}
