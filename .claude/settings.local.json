@@ -42,7 +42,12 @@
       "Bash(xargs grep -l \"accordion\")",
       "Bash(python -c \"import gradio as gr; print\\(hasattr\\(gr, ''skip''\\)\\); print\\(gr.skip\\(\\) if hasattr\\(gr, ''skip''\\) else ''N/A''\\)\")",
       "Bash(grep -o \".icon.*rotate\\\\|rotate.*icon\" \"d:/Projects/image-scoring/.venv/Lib/site-packages/gradio/templates/frontend/assets/Index-\"*.css)",
-      "Bash(grep -l \"label-wrap\\\\|transition.*150ms\" \"d:/Projects/image-scoring/.venv/Lib/site-packages/gradio/templates/frontend/assets/Index-\"*.css)"
+      "Bash(grep -l \"label-wrap\\\\|transition.*150ms\" \"d:/Projects/image-scoring/.venv/Lib/site-packages/gradio/templates/frontend/assets/Index-\"*.css)",
+      "Bash(python -c \"import ast; ast.parse\\(open\\(''modules/api.py''\\).read\\(\\)\\); print\\(''Syntax OK''\\)\")",
+      "Bash(xargs grep -l \"Windows\\\\|windows\\\\|native\")",
+      "Bash(xargs ls -la)",
+      "Bash(grep -r \"firebird\\\\|torch\" /d/Projects/image-scoring/*.txt /d/Projects/image-scoring/requirements/)",
+      "Bash(ls -la /d/Projects/image-scoring/run_webui*.bat)"
     ]
   }
 }
