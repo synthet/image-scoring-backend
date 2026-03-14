@@ -52,7 +52,16 @@
       "Bash(python -m py_compile modules/db.py)",
       "Bash(python -m py_compile modules/clustering.py)",
       "Bash(xargs grep:*)",
-      "Bash(find . -type f -name \"*.py\" -exec grep -l \"self\\\\.log\\\\|def log\\\\|class.*Log\" {})"
+      "Bash(find . -type f -name \"*.py\" -exec grep -l \"self\\\\.log\\\\|def log\\\\|class.*Log\" {})",
+      "Bash(grep -E \"^-.*\\\\.json$\")",
+      "Bash(grep -E \"^d|\\\\.json$\")",
+      "Bash(python scripts/export_openapi.py)",
+      "Bash(python -c \"import json; d=json.load\\(open\\(''openapi.json''\\)\\); print\\(''Paths:''\\); [print\\(f''  {m.upper\\(\\)} {p}''\\) for p,methods in d[''paths''].items\\(\\) for m in methods]; print\\(f''\\\\nSchemas: {len\\(d.get\\(\"\"components\"\",{}\\).get\\(\"\"schemas\"\",{}\\)\\)} models''\\)\")",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(npx tsc:*)",
+      "WebSearch",
+      "Bash(ls -la /d/Projects/image-scoring/*.py)"
     ]
   }
 }
