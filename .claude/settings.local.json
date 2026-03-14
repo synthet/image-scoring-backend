@@ -24,7 +24,7 @@
       "mcp__filesystem__read_text_file",
       "Bash(grep -n \"class ScoringRunner\\\\|class TaggingRunner\\\\|class ClusteringRunner\" /d/Projects/image-scoring/modules/*.py)",
       "Bash(python -m pytest tests/test_similar_search.py tests/test_tag_propagation.py -v)",
-      "Bash(python -c \"from modules.db import _generate_image_uuid; print\\(''Import OK''\\); print\\(''Random:'', _generate_image_uuid\\(None\\)\\); print\\(''Deterministic:'', _generate_image_uuid\\({''CreateDate'': ''2024:01:15 10:30:00'', ''SubSecTimeOriginal'': ''123'', ''Model'': ''NIKON Z8'', ''LensModel'': ''NIKKOR Z 50mm f/1.2 S'', ''ShutterCount'': ''54321''}\\)\\); print\\(''Deterministic again:'', _generate_image_uuid\\({''CreateDate'': ''2024:01:15 10:30:00'', ''SubSecTimeOriginal'': ''123'', ''Model'': ''NIKON Z8'', ''LensModel'': ''NIKKOR Z 50mm f/1.2 S'', ''ShutterCount'': ''54321''}\\)\\); print\\(''Existing EXIF UUID:'', _generate_image_uuid\\({''ImageUniqueID'': ''abc-123-existing''}\\)\\)\")",
+      "Bash(python -c \"from modules.db import generate_image_uuid; print\\(''Import OK''\\); print\\(''Random:'', generate_image_uuid\\(None\\)\\); print\\(''Deterministic:'', generate_image_uuid\\({''CreateDate'': ''2024:01:15 10:30:00'', ''SubSecTimeOriginal'': ''123'', ''Model'': ''NIKON Z8'', ''LensModel'': ''NIKKOR Z 50mm f/1.2 S'', ''ShutterCount'': ''54321''}\\)\\); print\\(''Deterministic again:'', generate_image_uuid\\({''CreateDate'': ''2024:01:15 10:30:00'', ''SubSecTimeOriginal'': ''123'', ''Model'': ''NIKON Z8'', ''LensModel'': ''NIKKOR Z 50mm f/1.2 S'', ''ShutterCount'': ''54321''}\\)\\); print\\(''Existing EXIF UUID:'', generate_image_uuid\\({''ImageUniqueID'': ''abc-123-existing''}\\)\\)\")",
       "Bash(python -c \"import sys; sys.path.insert\\(0,''.''\\); exec\\(open\\(''docs/design/gradio_pipeline_mockup.py''\\).read\\(\\).split\\(''demo.launch''\\)[0]\\); print\\(''OK: Blocks built successfully with'', len\\(demo.blocks\\), ''components''\\)\")",
       "Bash(python -c \":*)",
       "mcp__fetch__fetch",
@@ -51,7 +51,8 @@
       "Bash(python -m pytest tests/ -xvs -k \"test_\")",
       "Bash(python -m py_compile modules/db.py)",
       "Bash(python -m py_compile modules/clustering.py)",
-      "Bash(xargs grep:*)"
+      "Bash(xargs grep:*)",
+      "Bash(find . -type f -name \"*.py\" -exec grep -l \"self\\\\.log\\\\|def log\\\\|class.*Log\" {})"
     ]
   }
 }
