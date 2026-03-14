@@ -47,7 +47,11 @@
       "Bash(xargs grep -l \"Windows\\\\|windows\\\\|native\")",
       "Bash(xargs ls -la)",
       "Bash(grep -r \"firebird\\\\|torch\" /d/Projects/image-scoring/*.txt /d/Projects/image-scoring/requirements/)",
-      "Bash(ls -la /d/Projects/image-scoring/run_webui*.bat)"
+      "Bash(ls -la /d/Projects/image-scoring/run_webui*.bat)",
+      "Bash(python -m pytest tests/ -xvs -k \"test_\")",
+      "Bash(python -m py_compile modules/db.py)",
+      "Bash(python -m py_compile modules/clustering.py)",
+      "Bash(xargs grep:*)"
     ]
   }
 }
