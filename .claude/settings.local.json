@@ -61,7 +61,8 @@
       "Bash(npm run:*)",
       "Bash(npx tsc:*)",
       "WebSearch",
-      "Bash(ls -la /d/Projects/image-scoring/*.py)"
+      "Bash(ls -la /d/Projects/image-scoring/*.py)",
+      "Bash(ls d:Projectsimage-scoring/requirements*.txt)"
     ]
   }
 }
