@@ -62,7 +62,20 @@
       "Bash(npx tsc:*)",
       "WebSearch",
       "Bash(ls -la /d/Projects/image-scoring/*.py)",
-      "Bash(ls d:Projectsimage-scoring/requirements*.txt)"
+      "Bash(ls d:Projectsimage-scoring/requirements*.txt)",
+      "Bash(python cli.py --help)",
+      "Bash(python cli.py score --help)",
+      "Bash(python cli.py config --help)",
+      "Bash(python cli.py config get scoring)",
+      "Bash(grep -n \"TaggingRunner\\\\|tagging_runner\" /d/Projects/image-scoring/modules/*.py)",
+      "Bash(grep -n class.*Runner /d/Projects/image-scoring/modules/*.py)",
+      "Bash(python -m pytest --ignore=tests/test_events.py)",
+      "Bash(tasklist)",
+      "Bash(python -m pytest tests/ -x -q --ignore=tests/test_probe.py -k \"not db and not api\")",
+      "Bash(python -m pytest --ignore=tests/test_events.py --ignore=tests/test_probe.py)",
+      "Bash(python -m pytest tests/ -x -q -k \"pipeline or phase or scoring\" --ignore=tests/test_probe.py)",
+      "Bash(python -m pytest tests/test_api_queue.py::test_scoring_start_returns_500_when_enqueue_fails -x -q)",
+      "Bash(python -c \"import ast; ast.parse\\(open\\(''d:/Projects/image-scoring/modules/pipeline.py''\\).read\\(\\)\\); print\\(''Syntax OK''\\)\")"
     ]
   }
 }
