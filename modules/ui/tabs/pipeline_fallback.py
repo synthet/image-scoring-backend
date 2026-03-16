@@ -22,7 +22,7 @@ def create_tab(app_config, scoring_runner, tagging_runner, selection_runner, orc
         choices = _folder_choices()
         if path and path not in choices:
             choices = [path] + choices
-        updates = pipeline_full._update_folder_selection(path, force_refresh=True)
+        updates = pipeline_full.get_folder_selection_view(path, force_refresh=True)
         return (
             gr.update(choices=choices, value=path),
             path,
@@ -50,7 +50,7 @@ def create_tab(app_config, scoring_runner, tagging_runner, selection_runner, orc
 
         components["selected_path"] = gr.Textbox(value=last_folder, label="Selected folder")
 
-        initial_updates = pipeline_full._update_folder_selection(last_folder, force_refresh=False)
+        initial_updates = pipeline_full.get_folder_selection_view(last_folder, force_refresh=False)
         components["folder_summary_html"] = gr.Markdown(initial_updates[0])
         components["quick_start_html"] = gr.Markdown(initial_updates[5])
         components["stepper_html"] = gr.Markdown(initial_updates[1])
@@ -77,9 +77,7 @@ def create_tab(app_config, scoring_runner, tagging_runner, selection_runner, orc
             components["keywords_captions"] = gr.Checkbox(label="Generate Captions", value=False)
             components["keywords_run_btn"] = gr.Button("Start Keywords")
 
-        components["monitor_html"] = gr.Markdown(
-            pipeline_full._build_idle_html(recovery_info=app_config.get("job_recovery"), queued_jobs=[])
-        )
+        components["monitor_html"] = gr.Markdown("No active jobs in the pipeline.")
         components["console_output"] = gr.Textbox(lines=12, label="Console Output", interactive=False)
 
     def _run_scoring(path, force):
