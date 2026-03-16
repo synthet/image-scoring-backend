@@ -356,11 +356,22 @@ def create_tab(app_config, scoring_runner, tagging_runner, selection_runner, orc
         job = _find_latest_workflow_job(path)
         if not job:
             return "⚠️ No workflow job found for this folder."
-        target_by_action = {"pause": "paused", "resume": "running", "restart": "restarting"}
-        target = target_by_action[action]
+
+        phase = (job.get("job_type") or "").strip().lower()
         try:
-            db.update_job_status(job["id"], target, log=f"ui_{action}_requested")
-            if action == "restart":
+            if action == "pause":
+                # Best-effort stop so paused status reflects real execution state.
+                if phase in ("score", "scoring") and scoring_runner:
+                    scoring_runner.stop()
+                elif phase in ("selection", "culling") and selection_runner:
+                    selection_runner.stop()
+                elif phase in ("tag", "tagging", "keywords") and tagging_runner:
+                    tagging_runner.stop()
+                db.update_job_status(job["id"], "paused", log="ui_pause_requested")
+            elif action == "resume":
+                db.update_job_status(job["id"], "queued", log="ui_resume_requested")
+            else:  # restart
+                db.update_job_status(job["id"], "restarting", log="ui_restart_requested")
                 db.update_job_status(job["id"], "queued", log="ui_restart_queued")
             return f"✅ {action.title()} requested for job #{job['id']} (optimistic)."
         except ValueError as exc:
