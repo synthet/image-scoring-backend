@@ -45,7 +45,7 @@ Endpoints:
         GET /api/health - Health check endpoint
 """
 
-from fastapi import APIRouter, HTTPException, Body, Query
+from fastapi import APIRouter, HTTPException, Body, Query, Request
 from fastapi.responses import FileResponse, StreamingResponse
 import json
 
@@ -61,6 +61,24 @@ from modules.selector_resolver import resolve_selectors
 from modules.job_dispatcher import JobDispatcher
 
 logger = logging.getLogger(__name__)
+
+
+def _get_client_rate_limit_key(request: Request) -> str:
+    """Build a stable caller key for per-client rate limiting buckets."""
+    forwarded_for = request.headers.get("x-forwarded-for", "").strip()
+    if forwarded_for:
+        first_hop = forwarded_for.split(",", 1)[0].strip()
+        if first_hop:
+            return f"ip:{first_hop}"
+
+    real_ip = request.headers.get("x-real-ip", "").strip()
+    if real_ip:
+        return f"ip:{real_ip}"
+
+    if request.client and request.client.host:
+        return f"ip:{request.client.host}"
+
+    return "anonymous"
 
 # Request/Response Models with comprehensive descriptions for LLM agents
 
@@ -1051,7 +1069,7 @@ def create_api_router() -> APIRouter:
             503: {"description": "Scoring runner not available"}
         }
     )
-    async def start_scoring(request: ScoringStartRequest):
+    async def start_scoring(request: ScoringStartRequest, http_request: Request):
         """
         Start a batch scoring job.
 
@@ -1062,7 +1080,7 @@ def create_api_router() -> APIRouter:
             ApiResponse with success status and job_id if started
         """
         from modules.ui.security import _check_rate_limit
-        _check_rate_limit("scoring_start")
+        _check_rate_limit("scoring_start", _get_client_rate_limit_key(http_request))
 
         if _scoring_runner is None:
             raise HTTPException(status_code=503, detail="Scoring runner not available")
@@ -1299,10 +1317,10 @@ def create_api_router() -> APIRouter:
         """,
         response_description="Tagging job start confirmation"
     )
-    async def start_tagging(request: TaggingStartRequest):
+    async def start_tagging(request: TaggingStartRequest, http_request: Request):
         """Start a batch tagging job."""
         from modules.ui.security import _check_rate_limit
-        _check_rate_limit("tagging_start")
+        _check_rate_limit("tagging_start", _get_client_rate_limit_key(http_request))
 
         if _tagging_runner is None:
             raise HTTPException(status_code=503, detail="Tagging runner not available")
@@ -2253,10 +2271,10 @@ def create_api_router() -> APIRouter:
         The job runs asynchronously. Use GET /api/clustering/status to monitor progress.
         """
     )
-    async def start_clustering(request: ClusteringStartRequest):
+    async def start_clustering(request: ClusteringStartRequest, http_request: Request):
         """Start a batch clustering job."""
         from modules.ui.security import _check_rate_limit
-        _check_rate_limit("clustering_start")
+        _check_rate_limit("clustering_start", _get_client_rate_limit_key(http_request))
 
         if _clustering_runner is None:
             raise HTTPException(status_code=503, detail="Clustering runner not available")
@@ -2539,7 +2557,7 @@ def create_api_router() -> APIRouter:
         providing real-time progress updates during the folder scan and registration process.
         """
     )
-    async def import_register_stream(request: ImportRegisterRequest):
+    async def import_register_stream(request: ImportRegisterRequest, http_request: Request):
         """Streaming version of image registration."""
         from modules.ui.security import _check_rate_limit
         from modules import db, utils
@@ -2547,7 +2565,7 @@ def create_api_router() -> APIRouter:
         from modules.phases import PhaseCode, PhaseStatus
         from modules.version import APP_VERSION
 
-        _check_rate_limit("import_register")
+        _check_rate_limit("import_register", _get_client_rate_limit_key(http_request))
 
         folder_path = request.folder_path
         try:
@@ -2667,10 +2685,10 @@ def create_api_router() -> APIRouter:
         'cluster' requires a folder path.
         """
     )
-    async def submit_pipeline(request: PipelineSubmitRequest):
+    async def submit_pipeline(request: PipelineSubmitRequest, http_request: Request):
         """Submit image/folder to the processing pipeline."""
         from modules.ui.security import _check_rate_limit
-        _check_rate_limit("pipeline_submit")
+        _check_rate_limit("pipeline_submit", _get_client_rate_limit_key(http_request))
 
         if not request.input_path or not request.input_path.strip():
             raise HTTPException(status_code=400, detail="input_path is required")
@@ -2855,10 +2873,10 @@ def create_api_router() -> APIRouter:
         summary="Skip a pipeline phase",
         description="Marks all images in a folder phase as skipped, storing reason and actor."
     )
-    async def skip_pipeline_phase(request: PipelinePhaseControlRequest):
+    async def skip_pipeline_phase(request: PipelinePhaseControlRequest, http_request: Request):
         from modules.ui.security import _check_rate_limit
         from modules import db
-        _check_rate_limit("pipeline_phase_skip")
+        _check_rate_limit("pipeline_phase_skip", _get_client_rate_limit_key(http_request))
 
         if not os.path.exists(request.input_path):
             raise HTTPException(status_code=400, detail=f"Path not found: {request.input_path}")
@@ -2882,10 +2900,10 @@ def create_api_router() -> APIRouter:
         summary="Retry a skipped pipeline phase",
         description="Converts skipped statuses to running and starts the selected phase runner."
     )
-    async def retry_pipeline_phase(request: PipelinePhaseControlRequest):
+    async def retry_pipeline_phase(request: PipelinePhaseControlRequest, http_request: Request):
         from modules.ui.security import _check_rate_limit
         from modules import db
-        _check_rate_limit("pipeline_phase_retry")
+        _check_rate_limit("pipeline_phase_retry", _get_client_rate_limit_key(http_request))
 
         if not os.path.exists(request.input_path):
             raise HTTPException(status_code=400, detail=f"Path not found: {request.input_path}")
@@ -3009,10 +3027,10 @@ def create_api_router() -> APIRouter:
         without also updating `electron/db.ts`.
         """
     )
-    async def update_image(image_id: int, request: ImageUpdateRequest):
+    async def update_image(image_id: int, request: ImageUpdateRequest, http_request: Request):
         from modules import db
         from modules.ui.security import _check_rate_limit
-        _check_rate_limit("image_update")
+        _check_rate_limit("image_update", _get_client_rate_limit_key(http_request))
 
         conn = db.get_db()
         try:
@@ -3071,10 +3089,10 @@ def create_api_router() -> APIRouter:
         from disk. Use with caution — this is irreversible.
         """
     )
-    async def delete_image(image_id: int, delete_file: bool = Query(False, description="Also delete image file from disk.")):
+    async def delete_image(image_id: int, http_request: Request, delete_file: bool = Query(False, description="Also delete image file from disk.")):
         from modules import db
         from modules.ui.security import _check_rate_limit
-        _check_rate_limit("image_delete")
+        _check_rate_limit("image_delete", _get_client_rate_limit_key(http_request))
 
         conn = db.get_db()
         try:
@@ -3126,11 +3144,11 @@ def create_api_router() -> APIRouter:
         as an attachment.
         """
     )
-    async def export_gallery(request: ExportRequest):
+    async def export_gallery(request: ExportRequest, http_request: Request):
         from modules import db
         from modules.ui.security import _check_rate_limit
         import datetime
-        _check_rate_limit("gallery_export")
+        _check_rate_limit("gallery_export", _get_client_rate_limit_key(http_request))
 
         fmt = (request.format or "json").lower()
         if fmt not in ("json", "csv", "xlsx"):
@@ -3215,10 +3233,10 @@ def create_api_router() -> APIRouter:
         for a specific section.
         """
     )
-    async def save_config(section: str, body: Dict[str, Any] = Body(...)):
+    async def save_config(section: str, http_request: Request, body: Dict[str, Any] = Body(...)):
         from modules.config import save_config_section
         from modules.ui.security import _check_rate_limit
-        _check_rate_limit("config_save")
+        _check_rate_limit("config_save", _get_client_rate_limit_key(http_request))
         valid_sections = {"scoring", "processing", "culling", "ui", "tagging"}
         if section not in valid_sections:
             raise HTTPException(status_code=400, detail=f"Unknown config section: {section!r}. Valid: {sorted(valid_sections)}")
@@ -3564,10 +3582,10 @@ def create_api_router() -> APIRouter:
         summary="Backfill Index/Meta phase status",
         description="Sets INDEXING=DONE and METADATA=DONE for images that have SCORING=DONE but lack these statuses (repairs legacy or new-image backfill gap)."
     )
-    async def backfill_index_meta(request: PipelineBackfillRequest):
+    async def backfill_index_meta(request: PipelineBackfillRequest, http_request: Request):
         from modules.ui.security import _check_rate_limit
         from modules import db
-        _check_rate_limit("pipeline_backfill")
+        _check_rate_limit("pipeline_backfill", _get_client_rate_limit_key(http_request))
 
         if not os.path.exists(request.input_path):
             raise HTTPException(status_code=400, detail=f"Path not found: {request.input_path}")

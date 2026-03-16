@@ -317,4 +317,5 @@ Now includes `clustering` runner state:
 - **Data query endpoints** delegate to existing `db.py` functions; no new DB code.
 - **Stats endpoint** reuses `get_database_stats()` from the MCP server module.
 - All endpoints follow existing patterns: Pydantic models, `ApiResponse` wrapper, rate limiting, path validation.
+- **Rate limiting semantics:** protected mutating endpoints use in-memory buckets keyed by `(endpoint, client)` with a default limit of `10 requests / 60 seconds` per client per endpoint. Client identity is derived from `X-Forwarded-For` (first hop), then `X-Real-IP`, then FastAPI `request.client.host`, and falls back to `"anonymous"` if unavailable.
 - **Path conversion:** When the backend runs on Linux (WSL), Windows paths are converted to WSL via `utils.convert_path_to_wsl`. When the backend runs natively on Windows, paths are kept as-is.

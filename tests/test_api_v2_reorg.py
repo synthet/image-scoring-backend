@@ -79,12 +79,12 @@ def test_import_register_stream(monkeypatch):
     monkeypatch.setattr(os.path, "isfile", lambda x: True)
     
     monkeypatch.setattr(db, "get_or_create_folder", lambda x: 1)
-    monkeypatch.setattr(db, "find_image_id_by_path", lambda x: None)
+    monkeypatch.setattr(db, "find_image_id_by_path", lambda *args, **kwargs: None)
     monkeypatch.setattr(db, "register_image_for_import", lambda *args: (123, True))
     monkeypatch.setattr(db, "set_image_phase_status", lambda *args, **kwargs: None)
     
     # Mock rate limit and version if needed
-    monkeypatch.setattr("modules.ui.security._check_rate_limit", lambda x: None)
+    monkeypatch.setattr("modules.ui.security._check_rate_limit", lambda *args, **kwargs: None)
     
     # Mock extract_exif to avoid external dependencies
     monkeypatch.setattr("modules.exif_extractor.extract_exif", lambda x: {})
@@ -116,10 +116,10 @@ def test_import_register_legacy(monkeypatch):
     monkeypatch.setattr(os, "listdir", lambda x: ["img1.jpg"])
     monkeypatch.setattr(os.path, "isfile", lambda x: True)
     monkeypatch.setattr(db, "get_or_create_folder", lambda x: 1)
-    monkeypatch.setattr(db, "find_image_id_by_path", lambda x: None)
+    monkeypatch.setattr(db, "find_image_id_by_path", lambda *args, **kwargs: None)
     monkeypatch.setattr(db, "register_image_for_import", lambda *args: (123, True))
     monkeypatch.setattr(db, "set_image_phase_status", lambda *args, **kwargs: None)
-    monkeypatch.setattr("modules.ui.security._check_rate_limit", lambda x: None)
+    monkeypatch.setattr("modules.ui.security._check_rate_limit", lambda *args, **kwargs: None)
     monkeypatch.setattr("modules.exif_extractor.extract_exif", lambda x: {})
 
     with _build_client() as client:

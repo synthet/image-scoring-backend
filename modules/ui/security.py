@@ -15,14 +15,22 @@ _RATE_LIMIT_WINDOW = 60  # seconds
 _RATE_LIMIT_MAX_REQUESTS = 10
 
 
-def _check_rate_limit(endpoint: str):
-    """Simple in-memory rate limiter per endpoint."""
+def _check_rate_limit(endpoint: str, client_key: str = "anonymous"):
+    """Simple in-memory rate limiter per endpoint+client bucket.
+
+    Args:
+        endpoint: Logical endpoint name for the protected action.
+        client_key: Stable caller identifier (IP, session id, token hash).
+            Falls back to ``"anonymous"`` when unavailable.
+    """
     from fastapi import HTTPException
+
+    bucket_key = (endpoint, client_key or "anonymous")
     now = time.time()
-    _rate_limits[endpoint] = [t for t in _rate_limits[endpoint] if now - t < _RATE_LIMIT_WINDOW]
-    if len(_rate_limits[endpoint]) >= _RATE_LIMIT_MAX_REQUESTS:
+    _rate_limits[bucket_key] = [t for t in _rate_limits[bucket_key] if now - t < _RATE_LIMIT_WINDOW]
+    if len(_rate_limits[bucket_key]) >= _RATE_LIMIT_MAX_REQUESTS:
         raise HTTPException(status_code=429, detail="Rate limit exceeded")
-    _rate_limits[endpoint].append(now)
+    _rate_limits[bucket_key].append(now)
 
 # --- Path validation ---
 _ALLOWED_IMAGE_ROOTS = None

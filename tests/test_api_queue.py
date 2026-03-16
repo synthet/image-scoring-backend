@@ -82,7 +82,7 @@ def test_jobs_queue_endpoint_refreshes_from_db_with_limit_zero(monkeypatch):
 
 
 def test_pipeline_submit_cluster_enqueues_full_payload(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     monkeypatch.setattr(api, "_clustering_runner", _RunnerStub())
 
     captured = {}
@@ -137,7 +137,7 @@ def test_pipeline_submit_cluster_enqueues_full_payload(monkeypatch, tmp_path):
 
 
 def test_pipeline_submit_metadata_enqueues_scoring_runner_with_target_phases(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     monkeypatch.setattr(api, "_scoring_runner", _RunnerStub())
 
     captured = {}
@@ -187,7 +187,7 @@ def test_pipeline_submit_metadata_enqueues_scoring_runner_with_target_phases(mon
 
 
 def test_pipeline_submit_mixed_operations_only_targets_scoring_side(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     monkeypatch.setattr(api, "_scoring_runner", _RunnerStub())
 
     captured = {}
@@ -225,7 +225,7 @@ def test_pipeline_submit_mixed_operations_only_targets_scoring_side(monkeypatch,
 
 
 def test_pipeline_submit_metadata_requires_scoring_runner(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     monkeypatch.setattr(api, "_scoring_runner", None)
 
     with _build_client() as client:
@@ -239,7 +239,7 @@ def test_pipeline_submit_metadata_requires_scoring_runner(monkeypatch, tmp_path)
 
 
 def test_pipeline_phase_skip_calls_db_with_defaults(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     captured = {}
 
     def fake_set_folder_phase_status(**kwargs):
@@ -270,7 +270,7 @@ def test_pipeline_phase_skip_calls_db_with_defaults(monkeypatch, tmp_path):
 
 
 def test_pipeline_phase_skip_returns_400_for_missing_path(monkeypatch):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
 
     with _build_client() as client:
         response = client.post(
@@ -283,7 +283,7 @@ def test_pipeline_phase_skip_returns_400_for_missing_path(monkeypatch):
 
 
 def test_pipeline_phase_retry_scoring_starts_runner(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     runner = _BatchRunnerStub()
     monkeypatch.setattr(api, "_scoring_runner", runner)
 
@@ -314,7 +314,7 @@ def test_pipeline_phase_retry_scoring_starts_runner(monkeypatch, tmp_path):
 
 
 def test_pipeline_phase_retry_keywords_starts_runner(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     runner = _BatchRunnerStub()
     monkeypatch.setattr(api, "_tagging_runner", runner)
     monkeypatch.setattr(db, "set_folder_phase_status", lambda **kwargs: 4)
@@ -334,7 +334,7 @@ def test_pipeline_phase_retry_keywords_starts_runner(monkeypatch, tmp_path):
 
 
 def test_pipeline_phase_retry_culling_starts_runner(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     runner = _BatchRunnerStub()
     monkeypatch.setattr(api, "_clustering_runner", runner)
     monkeypatch.setattr(db, "set_folder_phase_status", lambda **kwargs: 6)
@@ -354,7 +354,7 @@ def test_pipeline_phase_retry_culling_starts_runner(monkeypatch, tmp_path):
 
 
 def test_pipeline_phase_retry_returns_503_when_runner_missing(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     monkeypatch.setattr(api, "_tagging_runner", None)
     monkeypatch.setattr(db, "set_folder_phase_status", lambda **kwargs: 1)
 
@@ -369,7 +369,7 @@ def test_pipeline_phase_retry_returns_503_when_runner_missing(monkeypatch, tmp_p
 
 
 def test_pipeline_phase_retry_rejects_unsupported_phase(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     monkeypatch.setattr(db, "set_folder_phase_status", lambda **kwargs: 3)
 
     with _build_client() as client:
@@ -383,7 +383,7 @@ def test_pipeline_phase_retry_rejects_unsupported_phase(monkeypatch, tmp_path):
 
 
 def test_pipeline_phase_backfill_returns_count(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     monkeypatch.setattr(db, "backfill_index_meta_for_folder", lambda folder_path: 9)
 
     with _build_client() as client:
@@ -401,7 +401,7 @@ def test_pipeline_phase_backfill_returns_count(monkeypatch, tmp_path):
 
 
 def test_pipeline_phase_backfill_returns_400_for_missing_path(monkeypatch):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
 
     with _build_client() as client:
         response = client.post(
@@ -414,7 +414,7 @@ def test_pipeline_phase_backfill_returns_400_for_missing_path(monkeypatch):
 
 
 def test_scoring_start_returns_500_when_enqueue_fails(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     monkeypatch.setattr(api, "_scoring_runner", _RunnerStub())
     monkeypatch.setattr(db, "enqueue_job", lambda *args, **kwargs: (None, 0))
 
@@ -426,7 +426,7 @@ def test_scoring_start_returns_500_when_enqueue_fails(monkeypatch, tmp_path):
 
 
 def test_tagging_start_returns_500_when_enqueue_fails(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     monkeypatch.setattr(api, "_tagging_runner", _RunnerStub())
     monkeypatch.setattr(db, "enqueue_job", lambda *args, **kwargs: (None, 0))
 
@@ -438,7 +438,7 @@ def test_tagging_start_returns_500_when_enqueue_fails(monkeypatch, tmp_path):
 
 
 def test_clustering_start_returns_500_when_enqueue_fails(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     monkeypatch.setattr(api, "_clustering_runner", _RunnerStub())
     monkeypatch.setattr(db, "enqueue_job", lambda *args, **kwargs: (None, 0))
 
@@ -450,7 +450,7 @@ def test_clustering_start_returns_500_when_enqueue_fails(monkeypatch, tmp_path):
 
 
 def test_pipeline_submit_returns_500_when_enqueue_fails(monkeypatch, tmp_path):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
     monkeypatch.setattr(api, "_clustering_runner", _RunnerStub())
     monkeypatch.setattr(db, "enqueue_job", lambda *args, **kwargs: (None, 0))
 
@@ -467,7 +467,7 @@ def test_pipeline_submit_returns_500_when_enqueue_fails(monkeypatch, tmp_path):
 
 
 def test_pipeline_submit_requires_input_path(monkeypatch):
-    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda endpoint: None)
+    monkeypatch.setattr(ui_security, "_check_rate_limit", lambda *args, **kwargs: None)
 
     with _build_client() as client:
         response = client.post("/api/pipeline/submit", json={"operations": ["score"]})

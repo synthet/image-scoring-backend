@@ -96,3 +96,16 @@ class TestRateLimit:
         with pytest.raises(HTTPException) as exc_info:
             _check_rate_limit("test_endpoint_flood")
         assert exc_info.value.status_code == 429
+
+    def test_rate_limit_isolated_per_client_key(self):
+        """Requests from different callers should use separate buckets."""
+        from modules.ui.security import _check_rate_limit, _rate_limits, _RATE_LIMIT_MAX_REQUESTS
+
+        _rate_limits.clear()
+
+        for _ in range(_RATE_LIMIT_MAX_REQUESTS):
+            _check_rate_limit("test_endpoint_shared", client_key="client-a")
+
+        # Different client key should still be allowed.
+        _check_rate_limit("test_endpoint_shared", client_key="client-b")
+
