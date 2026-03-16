@@ -458,3 +458,36 @@ def test_restart_step_run_success(monkeypatch):
         response = client.post("/api/step-runs/99/scoring/restart", json={})
     assert response.status_code == 200
     assert calls == ["restarting", "queued"]
+
+
+def test_resume_workflow_run_queues_for_dispatch(monkeypatch):
+    calls = []
+
+    monkeypatch.setattr(db, "get_job_by_id", lambda job_id: {"id": job_id, "status": "paused", "job_type": "scoring"})
+
+    def _update(job_id, status, log=None, **kwargs):
+        calls.append(status)
+
+    monkeypatch.setattr(db, "update_job_status", _update)
+    with _build_client() as client:
+        response = client.post("/api/workflow-runs/1/resume", json={})
+    assert response.status_code == 200
+    assert calls == ["queued"]
+
+
+def test_pause_workflow_run_stops_runner_best_effort(monkeypatch):
+    class _StopRunner:
+        def __init__(self):
+            self.stopped = False
+
+        def stop(self):
+            self.stopped = True
+
+    runner = _StopRunner()
+    monkeypatch.setattr(api, "_scoring_runner", runner)
+    monkeypatch.setattr(db, "get_job_by_id", lambda job_id: {"id": job_id, "status": "running", "job_type": "scoring"})
+    monkeypatch.setattr(db, "update_job_status", lambda *args, **kwargs: None)
+    with _build_client() as client:
+        response = client.post("/api/workflow-runs/1/pause", json={})
+    assert response.status_code == 200
+    assert runner.stopped is True

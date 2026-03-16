@@ -737,14 +737,42 @@ def create_api_router() -> APIRouter:
         msg = str(exc)
         if "Invalid" in msg and "transition" in msg:
             raise HTTPException(status_code=409, detail=msg)
-        raise exc
+        if isinstance(exc, HTTPException):
+            raise exc
+        raise HTTPException(status_code=500, detail=msg)
+
+    def _runner_for_job(job: Dict[str, Any]):
+        phase = (job.get("job_type") or "").strip().lower()
+        if phase in ("score", "scoring"):
+            return _scoring_runner
+        if phase in ("tag", "tagging", "keywords"):
+            return _tagging_runner
+        if phase in ("cluster", "clustering"):
+            return _clustering_runner
+        if phase in ("selection", "culling"):
+            return _selection_runner
+        return None
 
     def _control_job(job_id: int, target_status: str, reason: Optional[str] = None):
         job = db.get_job_by_id(job_id)
         if not job:
             raise HTTPException(status_code=404, detail="Job not found")
+
         try:
-            db.update_job_status(job_id, target_status, log=reason)
+            status = (target_status or "").strip().lower()
+            if status == "paused":
+                runner = _runner_for_job(job)
+                if runner and hasattr(runner, "stop"):
+                    try:
+                        runner.stop()
+                    except Exception:
+                        logger.debug("Pause request: runner stop failed for job %s", job_id, exc_info=True)
+                db.update_job_status(job_id, "paused", log=reason)
+            elif status == "running":
+                # Resume requests should return the job to dispatcher control.
+                db.update_job_status(job_id, "queued", log=reason or "resume_requested")
+            else:
+                db.update_job_status(job_id, status, log=reason)
             return db.get_job_by_id(job_id)
         except Exception as exc:
             _http_for_transition_error(exc)
@@ -2067,7 +2095,7 @@ def create_api_router() -> APIRouter:
     @router.post("/workflow-runs/{job_id}/restart", response_model=ApiResponse, summary="Restart workflow run")
     async def restart_workflow_run(job_id: int, request: LifecycleControlRequest):
         _control_job(job_id, "restarting", request.reason)
-        state = _control_job(job_id, "queued", request.reason)
+        state = _control_job(job_id, "running", request.reason)
         return ApiResponse(success=True, message="Workflow restarting", data={"job": state})
 
     @router.post("/stage-runs/{job_id}/{phase_code}/pause", response_model=ApiResponse, summary="Pause stage run")

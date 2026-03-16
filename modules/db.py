@@ -3637,13 +3637,13 @@ def set_job_phase_state(job_id, phase_code, state, error_message=None):
         "pending": {"queued", "running", "skipped", "canceled"},
         "queued": {"running", "paused", "cancel_requested", "canceled"},
         "running": {"paused", "completed", "failed", "cancel_requested", "restarting", "canceled"},
-        "paused": {"running", "restarting", "cancel_requested", "canceled"},
-        "cancel_requested": {"canceled", "failed"},
+        "paused": {"queued", "running", "restarting", "cancel_requested", "canceled"},
+        "cancel_requested": {"canceled", "failed", "restarting"},
         "restarting": {"queued", "running", "failed"},
-        "completed": set(),
-        "failed": set(),
-        "skipped": set(),
-        "canceled": set(),
+        "completed": {"restarting", "queued"},
+        "failed": {"restarting", "queued"},
+        "skipped": {"restarting", "queued", "running"},
+        "canceled": {"restarting", "queued"},
     }
     conn = get_db()
     c = conn.cursor()
