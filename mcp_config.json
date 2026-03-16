@@ -10,6 +10,15 @@
         "PYTHONPATH": "d:\\Projects\\image-scoring"
       }
     },
+    "image-scoring-webui": {
+      "url": "http://localhost:7860/mcp/sse"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    },
     "firebird-admin": {
       "command": "python",
       "args": [
