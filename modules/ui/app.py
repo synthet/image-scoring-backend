@@ -203,6 +203,8 @@ def setup_server_endpoints(fastapi_app, scoring_runner=None, tagging_runner=None
                 media_type="image/jpeg",
                 headers={"Cache-Control": "public, max-age=3600"}
             )
+        except HTTPException:
+            raise
         except Exception as e:
             raise HTTPException(status_code=500, detail=str(e))
     
