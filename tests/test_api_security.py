@@ -69,6 +69,63 @@ class TestPathValidation:
             _validate_file_path("D:/Photos/../../../etc/passwd")
         assert exc_info.value.status_code == 400
 
+    def test_allowed_root_exact_match(self, tmp_path, monkeypatch):
+        """Exact root path should be allowed."""
+        from modules.ui import security
+
+        root = tmp_path / "allowed"
+        root.mkdir()
+
+        monkeypatch.setattr(security, "_ALLOWED_IMAGE_ROOTS", [str(root)])
+
+        assert security._validate_file_path(str(root)) == os.path.realpath(str(root))
+
+    def test_allowed_root_nested_child(self, tmp_path, monkeypatch):
+        """Child path under allowed root should be allowed."""
+        from modules.ui import security
+
+        root = tmp_path / "allowed"
+        child = root / "nested" / "image.jpg"
+        child.parent.mkdir(parents=True)
+        child.touch()
+
+        monkeypatch.setattr(security, "_ALLOWED_IMAGE_ROOTS", [str(root)])
+
+        assert security._validate_file_path(str(child)) == os.path.realpath(str(child))
+
+    def test_shared_prefix_sibling_rejected(self, tmp_path, monkeypatch):
+        """Sibling with shared prefix (bar2) must not match root (bar)."""
+        from fastapi import HTTPException
+        from modules.ui import security
+
+        root = tmp_path / "foo" / "bar"
+        sibling = tmp_path / "foo" / "bar2" / "image.jpg"
+        root.mkdir(parents=True)
+        sibling.parent.mkdir(parents=True)
+        sibling.touch()
+
+        monkeypatch.setattr(security, "_ALLOWED_IMAGE_ROOTS", [str(root)])
+
+        with pytest.raises(HTTPException) as exc_info:
+            security._validate_file_path(str(sibling))
+        assert exc_info.value.status_code == 403
+        assert exc_info.value.detail == "Access denied"
+
+    def test_symlink_resolved_path_allowed(self, tmp_path, monkeypatch):
+        """Symlink paths should be validated against their resolved location."""
+        from modules.ui import security
+
+        root = tmp_path / "allowed"
+        target = root / "images" / "sample.jpg"
+        link = tmp_path / "link.jpg"
+        target.parent.mkdir(parents=True)
+        target.touch()
+        link.symlink_to(target)
+
+        monkeypatch.setattr(security, "_ALLOWED_IMAGE_ROOTS", [str(root)])
+
+        assert security._validate_file_path(str(link)) == os.path.realpath(str(target))
+
 
 class TestRateLimit:
     """Test the rate limiting logic."""

@@ -42,10 +42,20 @@ def _validate_file_path(file_path: str) -> str:
         _ALLOWED_IMAGE_ROOTS = config.get_config_value("allowed_paths", [])
         _ALLOWED_IMAGE_ROOTS.extend(config.get_default_allowed_paths())
 
-    if _ALLOWED_IMAGE_ROOTS and not any(
-        resolved.startswith(os.path.realpath(root)) for root in _ALLOWED_IMAGE_ROOTS
-    ):
-        raise HTTPException(status_code=403, detail="Access denied")
+    if _ALLOWED_IMAGE_ROOTS:
+        is_allowed = False
+        for root in _ALLOWED_IMAGE_ROOTS:
+            allowed_root = os.path.realpath(root)
+            try:
+                if os.path.commonpath([resolved, allowed_root]) == allowed_root:
+                    is_allowed = True
+                    break
+            except ValueError:
+                # Different drives (primarily on Windows) are not ancestors.
+                continue
+
+        if not is_allowed:
+            raise HTTPException(status_code=403, detail="Access denied")
 
     return resolved
 
