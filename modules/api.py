@@ -2090,12 +2090,12 @@ def create_api_router() -> APIRouter:
     @router.post("/workflow-runs/{job_id}/resume", response_model=ApiResponse, summary="Resume workflow run")
     async def resume_workflow_run(job_id: int, request: LifecycleControlRequest):
         state = _control_job(job_id, "running", request.reason)
-        return ApiResponse(success=True, message="Workflow resumed", data={"job": state})
+        return ApiResponse(success=True, message="Workflow queued for resume", data={"job": state})
 
     @router.post("/workflow-runs/{job_id}/restart", response_model=ApiResponse, summary="Restart workflow run")
     async def restart_workflow_run(job_id: int, request: LifecycleControlRequest):
         _control_job(job_id, "restarting", request.reason)
-        state = _control_job(job_id, "running", request.reason)
+        state = _control_job(job_id, "queued", request.reason)
         return ApiResponse(success=True, message="Workflow restarting", data={"job": state})
 
     @router.post("/stage-runs/{job_id}/{phase_code}/pause", response_model=ApiResponse, summary="Pause stage run")
