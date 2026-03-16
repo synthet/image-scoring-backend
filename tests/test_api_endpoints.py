@@ -421,8 +421,10 @@ def test_all_status_returns_all_keys(monkeypatch):
 
 def test_pause_workflow_run_returns_conflict(monkeypatch):
     monkeypatch.setattr(db, "get_job_by_id", lambda job_id: {"id": job_id, "status": "completed"})
+
     def _raise(*args, **kwargs):
         raise ValueError("Invalid job status transition: completed -> paused")
+
     monkeypatch.setattr(db, "update_job_status", _raise)
     with _build_client() as client:
         response = client.post("/api/workflow-runs/1/pause", json={})
@@ -432,7 +434,11 @@ def test_pause_workflow_run_returns_conflict(monkeypatch):
 def test_resume_stage_run_success(monkeypatch):
     monkeypatch.setattr(db, "get_job_by_id", lambda job_id: {"id": job_id, "status": "paused"})
     monkeypatch.setattr(db, "get_job_phases", lambda job_id: [{"phase_code": "scoring", "state": "paused"}])
-    monkeypatch.setattr(db, "set_job_phase_state", lambda *args, **kwargs: [{"phase_code": "scoring", "state": "running"}])
+    monkeypatch.setattr(
+        db,
+        "set_job_phase_state",
+        lambda *args, **kwargs: [{"phase_code": "scoring", "state": "running"}],
+    )
     with _build_client() as client:
         response = client.post("/api/stage-runs/1/scoring/resume", json={})
     assert response.status_code == 200
@@ -441,7 +447,12 @@ def test_resume_stage_run_success(monkeypatch):
 
 def test_restart_step_run_success(monkeypatch):
     calls = []
-    monkeypatch.setattr(db, "set_image_phase_status", lambda image_id, phase_code, status, error=None: calls.append(status))
+
+    monkeypatch.setattr(
+        db,
+        "set_image_phase_status",
+        lambda image_id, phase_code, status, error=None: calls.append(status),
+    )
     monkeypatch.setattr(db, "get_image_phase_statuses", lambda image_id: {"scoring": {"status": "queued"}})
     with _build_client() as client:
         response = client.post("/api/step-runs/99/scoring/restart", json={})
