@@ -1,25 +1,26 @@
 {
   "mcpServers": {
-    "image-scoring": {
+    "imgscore-py-stdio": {
       "command": "python",
       "args": [
         "-m",
         "modules.mcp_server"
       ],
+      "cwd": "${workspaceFolder}",
       "env": {
-        "PYTHONPATH": "d:\\Projects\\image-scoring"
+        "PYTHONPATH": "${workspaceFolder}"
       }
     },
-    "image-scoring-webui": {
-      "url": "http://localhost:7860/mcp/sse"
+    "imgscore-py-sse": {
+      "url": "http://127.0.0.1:7860/mcp/sse"
     },
-    "playwright": {
+    "imgscore-py-playwright": {
       "command": "npx",
       "args": [
         "@playwright/mcp@latest"
       ]
     },
-    "firebird-admin": {
+    "imgscore-py-firebird-admin": {
       "command": "python",
       "args": [
         "-m",
