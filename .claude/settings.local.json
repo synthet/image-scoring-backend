@@ -75,7 +75,19 @@
       "Bash(python -m pytest --ignore=tests/test_events.py --ignore=tests/test_probe.py)",
       "Bash(python -m pytest tests/ -x -q -k \"pipeline or phase or scoring\" --ignore=tests/test_probe.py)",
       "Bash(python -m pytest tests/test_api_queue.py::test_scoring_start_returns_500_when_enqueue_fails -x -q)",
-      "Bash(python -c \"import ast; ast.parse\\(open\\(''d:/Projects/image-scoring/modules/pipeline.py''\\).read\\(\\)\\); print\\(''Syntax OK''\\)\")"
+      "Bash(python -c \"import ast; ast.parse\\(open\\(''d:/Projects/image-scoring/modules/pipeline.py''\\).read\\(\\)\\); print\\(''Syntax OK''\\)\")",
+      "mcp__imgscore-py-stdio__get_recent_jobs",
+      "mcp__imgscore-py-stdio__get_config",
+      "mcp__imgscore-py-stdio__get_runner_status",
+      "mcp__imgscore-py-stdio__read_debug_log",
+      "mcp__imgscore-py-stdio__get_pipeline_stats",
+      "Bash(python -m pytest tests/test_api_queue.py -v --timeout=30)",
+      "Bash(python -m pytest tests/test_api_queue.py -v)",
+      "Bash(python -m pytest -m \"not gpu and not db and not ml and not firebird\" -v)",
+      "Bash(python -c \"import ast; ast.parse\\(open\\(''modules/api.py'', encoding=''utf-8''\\).read\\(\\)\\); print\\(''OK''\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\(''modules/db.py'', encoding=''utf-8''\\).read\\(\\)\\); ast.parse\\(open\\(''modules/api.py'', encoding=''utf-8''\\).read\\(\\)\\); print\\(''OK''\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\(''modules/api.py'', encoding=''utf-8''\\).read\\(\\)\\); ast.parse\\(open\\(''modules/db.py'', encoding=''utf-8''\\).read\\(\\)\\); print\\(''OK''\\)\")",
+      "Bash(python -c \"from modules.db import requeue_job, update_job_payload, resume_job_phases; print\\(''db OK''\\)\")"
     ]
   }
 }

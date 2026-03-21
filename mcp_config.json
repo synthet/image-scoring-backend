@@ -27,7 +27,7 @@
         "modules.mcp_server_firebird"
       ],
       "env": {
-        "PYTHONPATH": "d:\\Projects\\image-scoring"
+        "PYTHONPATH": "d:\\Projects\\image-scoring-backend"
       }
     }
   }
