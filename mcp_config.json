@@ -12,13 +12,15 @@
       }
     },
     "imgscore-py-sse": {
-      "url": "http://127.0.0.1:7860/mcp/sse"
+      "url": "http://127.0.0.1:7860/mcp/sse",
+      "disabled": true
     },
     "imgscore-py-playwright": {
       "command": "npx",
       "args": [
         "@playwright/mcp@latest"
-      ]
+      ],
+      "disabled": true
     },
     "imgscore-py-firebird-admin": {
       "command": "python",
@@ -26,6 +28,7 @@
         "-m",
         "modules.mcp_server_firebird"
       ],
+      "cwd": "${workspaceFolder}",
       "env": {
         "PYTHONPATH": "d:\\Projects\\image-scoring-backend"
       }
