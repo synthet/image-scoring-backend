@@ -32,6 +32,18 @@
       "env": {
         "PYTHONPATH": "d:\\Projects\\image-scoring-backend"
       }
+    },
+    "imgscore-py-postgres": {
+      "command": "d:\\Projects\\image-scoring-backend\\tools\\toolbox.exe",
+      "args": ["--prebuilt", "postgres", "--stdio"],
+      "env": {
+        "POSTGRES_HOST": "127.0.0.1",
+        "POSTGRES_PORT": "5432",
+        "POSTGRES_DATABASE": "image_scoring",
+        "POSTGRES_USER": "postgres",
+        "POSTGRES_PASSWORD": "postgres"
+      },
+      "disabled": true
     }
   }
 }
