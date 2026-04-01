@@ -2,10 +2,7 @@
   "mcpServers": {
     "imgscore-py-stdio": {
       "command": "python",
-      "args": [
-        "-m",
-        "modules.mcp_server"
-      ],
+      "args": ["-m", "modules.mcp_server"],
       "cwd": "${workspaceFolder}",
       "env": {
         "PYTHONPATH": "${workspaceFolder}"
@@ -15,23 +12,50 @@
       "url": "http://127.0.0.1:7860/mcp/sse",
       "disabled": true
     },
-    "imgscore-py-playwright": {
+    "imgscore-py-firebird": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest"
+        "-y",
+        "mcp-firebird",
+        "--database",
+        "d:\\Projects\\image-scoring-backend\\SCORING_HISTORY.FDB",
+        "--user",
+        "sysdba",
+        "--password",
+        "masterkey"
+      ],
+      "disabled": true,
+      "disabledTools": [
+        "verify-wire-encryption",
+        "restore-database",
+        "backup-database",
+        "analyze-table-statistics",
+        "get-field-descriptions",
+        "system-health-check",
+        "get-database-info",
+        "get-server-info",
+        "execute-batch-queries",
+        "describe-batch-tables",
+        "analyze-missing-indexes",
+        "get-tool-help",
+        "list-available-tools",
+        "get-execution-plan",
+        "analyze-query-performance"
+      ]
+    },
+    "imgscore-py-chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp",
+        "--browser-url=http://127.0.0.1:9222"
       ],
       "disabled": true
     },
-    "imgscore-py-firebird-admin": {
-      "command": "python",
-      "args": [
-        "-m",
-        "modules.mcp_server_firebird"
-      ],
-      "cwd": "${workspaceFolder}",
-      "env": {
-        "PYTHONPATH": "d:\\Projects\\image-scoring-backend"
-      }
+    "imgscore-py-playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"],
+      "disabled": true
     },
     "imgscore-py-postgres": {
       "command": "d:\\Projects\\image-scoring-backend\\tools\\toolbox.exe",
@@ -42,8 +66,7 @@
         "POSTGRES_DATABASE": "image_scoring",
         "POSTGRES_USER": "postgres",
         "POSTGRES_PASSWORD": "postgres"
-      },
-      "disabled": true
+      }
     }
   }
 }
