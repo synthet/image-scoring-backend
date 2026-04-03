@@ -18,7 +18,7 @@
         "-y",
         "mcp-firebird",
         "--database",
-        "d:\\Projects\\image-scoring-backend\\SCORING_HISTORY.FDB",
+        "${workspaceFolder}/SCORING_HISTORY.FDB",
         "--user",
         "sysdba",
         "--password",
@@ -58,7 +58,7 @@
       "disabled": true
     },
     "imgscore-py-postgres": {
-      "command": "d:\\Projects\\image-scoring-backend\\tools\\toolbox.exe",
+      "command": "${workspaceFolder}/tools/toolbox.exe",
       "args": ["--prebuilt", "postgres", "--stdio"],
       "env": {
         "POSTGRES_HOST": "127.0.0.1",
