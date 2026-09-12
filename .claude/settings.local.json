@@ -332,7 +332,17 @@
       "mcp__is-be-jobs__get_recent_jobs",
       "mcp__is-be-diag__search_logs",
       "mcp__is-be-jobs__get_image_pipeline_failures",
-      "Bash(npx cross-env *)"
+      "Bash(npx cross-env *)",
+      "Bash(cp reports/bird-crop/degradation.json __TRACKED_VAR__/degradation_learned_backup.json)",
+      "Bash(cp reports/bird-crop/degradation.md __TRACKED_VAR__/degradation_learned_backup.md)",
+      "Bash(grep -E --line-buffered \"images$|Wrote|Carried forward|Traceback|Error|Killed\")",
+      "Bash(mkdir -p docs/raw/sessions/2026-08-05)",
+      "Bash(cp \".agent/scratch/session-summaries/2026-08-05T214647-0500-cursor-agent-grok-4.5-bird-crop-closeout.md\" docs/raw/sessions/2026-08-05/bird-crop-closeout-cursor-grok-4.5.md)",
+      "Bash(cp \".agent/scratch/2026-08-05T214646-session-summary-cursor-grok-4.5.md\" docs/raw/sessions/2026-08-05/student-scorer-e2-cursor-grok-4.5.md)",
+      "Bash(cp \"/d/Projects/image-scoring-model/.agent/scratch/2026-08-01-103259-claude-code-opus-5-e2-render-train-session.md\" docs/raw/sessions/2026-08-05/student-scorer-e2-claude-opus-5.md)",
+      "Bash(MSYS_NO_PATHCONV=1 wsl -e bash -c 'ps -ef | grep -E \"run_trackA_resume|degradation_eval\" | grep -v grep || echo \"\\(no Track A process\\)\"'& D:\\\\Projects\\\\image-scoring-backend\\\\.venv\\\\Scripts\\\\Activate.ps1)",
+      "Bash(MSYS_NO_PATHCONV=1 wsl -e bash -c 'cd /mnt/d/Projects/image-scoring-backend && source ~/.venvs/tf/bin/activate && ruff check modules/bird_detection.py modules/bird_species.py scripts/backfill_bird_bbox.py tests/test_bird_detection.py tests/test_bird_species.py tests/test_backfill_bird_bbox.py && python -m pytest tests/test_bird_detection.py tests/test_bird_species.py tests/test_backfill_bird_bbox.py -q 2>&1 | tail -20')",
+      "Bash(grep -n \"    import torch$\")"
     ]
   },
   "enableAllProjectMcpServers": true,
