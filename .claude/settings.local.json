@@ -126,8 +126,6 @@
       "mcp__imgscore-py-sse__check_stack_invariants",
       "mcp__imgscore-py-sse__execute_sql",
       "Bash(mkdir -p .claude/skills .claude/agents)",
-      "Bash(cp -r .cursor/skills/* .claude/skills/)",
-      "Bash(cp .cursor/agents/*.md .claude/agents/)",
       "Bash(powershell *)",
       "Bash(git rm *)",
       "mcp__imgscore-py-sse__get_job_details",
