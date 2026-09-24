@@ -626,3 +626,7 @@ Deferred to stage 5: bounded decoded-image reuse, which was in the stage 3 scope
 ## [2026-09-24] created | Score analytics dashboard and model suitability toolkit
 
 - 2026-09-24: created — [score analytics and model suitability](features/implemented/11-score-analytics-and-model-suitability.md) for #393; updated [API_CONTRACT.md](technical/API_CONTRACT.md) (score analytics endpoints), [features/implemented/INDEX.md](features/implemented/INDEX.md), [FRONTEND_VISUAL_SPEC.md](design/FRONTEND_VISUAL_SPEC.md) (chart palette exception) and [scripts/README.md](../scripts/README.md).
+
+## [2026-09-24] created | ONNX conversion feasibility
+
+- 2026-09-24: created — [ONNX conversion feasibility](planning/models/ONNX_CONVERSION_FEASIBILITY.md) (per-model feasibility, pros/cons, phased plan); linked from [planning/INDEX.md](planning/INDEX.md).
