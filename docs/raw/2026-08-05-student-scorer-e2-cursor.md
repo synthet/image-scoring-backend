@@ -92,5 +92,5 @@ Multi-session student-scorer research program on **image-scoring-backend**, cont
 ## Related transcript exports
 
 - `D:\Projects\image-scoring-model\2026-08-03-211805-cusersdmnsycursorplansresumee2rendertra.txt` — render resume / flush fix / mid-render relaunch.
-- `D:\Projects\image-scoring-model\2026-08-05-175533-this-session-is-being-continued-from-a-previous-c.txt` — render completion checkpoint (hold before GPU).
+- Local export `2026-08-05-175533-this-session-is-being-continued-from-a-previous-c.txt` (image-scoring-model workspace, not versioned) — render completion checkpoint (hold before GPU).
 - This Cursor session continued past that hold into E2 smoke + full train.

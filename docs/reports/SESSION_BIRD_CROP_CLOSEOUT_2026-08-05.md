@@ -99,7 +99,7 @@ agent-derived labels.
 
 ### 4. Hygiene
 
-- Root `2026-*.txt` transcript dumps moved to `.agent/scratch/session-transcripts/` in both repos.
+- Root `2026-*.txt` transcript dumps relocated to operator-local, gitignored storage (not linked from public docs).
 - Non-canonical `label_set_judges-*.json` archived to `.agent/scratch/bird-crop-label-sidecars/`;
   only `57c86c08…` kept.
 - Keep-awake held for the duration of the long runs.
