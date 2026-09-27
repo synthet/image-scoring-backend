@@ -67,7 +67,7 @@ Finish the pinned bird-bbox crop study close-out after Phase 2 / 2b / 3 / 4 and 
    - At last pause check (`2026-08-05` ~21:44): **`laplacian_variance` finished and merged** (liqe/topiq/arniqa intact); **`tenengrad` ~50/236** in flight; `dog_energy` / `haar_energy` still queued. Wrapper: `/tmp/run_trackA_sequential.sh`, log `reports/bird-crop/trackA.log`.
 4. **Arm B vs labels** — Implemented `_arm_b_vs_labels` in `focus_eval.py` (reject = positive; tags agent-derived); unit tests in `tests/test_bird_crop_focus_arm_b_labels.py` (3 passed). Focus re-run still pending until Track A finishes.
 5. **Hygiene**
-   - Moved root `2026-*.txt` dumps → `.agent/scratch/session-transcripts/` (backend + skills).
+   - Moved root `2026-*.txt` dumps off the repo root into operator-local gitignored storage (backend + skills).
    - Archived non-canonical `label_set_judges-*.json` → `.agent/scratch/bird-crop-label-sidecars/`; kept `57c86c08…`.
    - Keep-awake started/confirmed during long runs.
    - Later dump reappeared at root: `2026-08-03-220609-cusersdmnsycursorplanspinnedphase2reswe.txt` (still at root at pause; move on next resume).
