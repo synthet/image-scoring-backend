@@ -18,7 +18,7 @@ okf_version: 0.1
 | Agent | Claude Code (CLI) |
 | Model | Opus 5 (`claude-opus-5`) |
 | Invoked from | `D:\Projects\image-scoring-model` |
-| **Work target** | **`D:\Projects\image-scoring-backend`** (a different repo) |
+| **Work target** | **`D:\Projects\image-scoring-pipeline`** (a different repo) |
 | Driving plan | `C:\Users\dmnsy\.claude\plans\c-users-dmnsy-cursor-plans-resume-e2-ren-parallel-marble.md` |
 | Contract | `.agent/scratch/e2_autonomous_run_contract.md` (backend repo) |
 | Manifest | `msm_8ef568a5db3d9f79` |

@@ -16,14 +16,14 @@ okf_version: 0.1
 | **Agent** | Cursor Agent |
 | **Model** | Cursor Grok 4.5 |
 | **Workspace** | `D:\Projects\image-scoring-model` |
-| **Primary work repo** | `D:\Projects\image-scoring-backend` (`synthet/image-scoring-backend`) |
+| **Primary work repo** | `D:\Projects\image-scoring-pipeline` (`synthet/image-scoring-pipeline`) |
 | **Manifest / protocol** | `msm_8ef568a5db3d9f79` / `ssp_429e3332d8ab` |
 
 ---
 
 ## Arc (what this conversation covered)
 
-Multi-session student-scorer research program on **image-scoring-backend**, continuing from an approved “Full Student Scorer Research Program” and later E0/E1 / E2 resume plans.
+Multi-session student-scorer research program on **image-scoring-pipeline**, continuing from an approved “Full Student Scorer Research Program” and later E0/E1 / E2 resume plans.
 
 ### Already complete before this window
 
@@ -75,7 +75,7 @@ Multi-session student-scorer research program on **image-scoring-backend**, cont
 | `.agent/scratch/e2_full_train.log` | Full-train log |
 | `.agent/scratch/run_e2_full_only.sh` | Relaunch script |
 | `docs/research/STUDENT_SCORER_*.md` | Protocol / results / E2 checkpoint |
-| https://github.com/synthet/image-scoring-backend/issues/323 | Tracking issue |
+| https://github.com/synthet/image-scoring-pipeline/issues/323 | Tracking issue |
 
 ---
 

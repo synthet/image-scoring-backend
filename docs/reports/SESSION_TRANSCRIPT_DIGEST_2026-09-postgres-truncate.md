@@ -8,7 +8,7 @@ timestamp: 2026-09-27T16:55:00Z
 okf_version: 0.1
 ---
 
-# Session digest — Postgres test truncate rollback ([#399](https://github.com/synthet/image-scoring-backend/issues/399))
+# Session digest — Postgres test truncate rollback ([#399](https://github.com/synthet/image-scoring-pipeline/issues/399))
 
 ## Symptom
 
@@ -23,7 +23,7 @@ After `TRUNCATE`, the same transaction re-seeded `pipeline_phases` using Python 
 was swallowed (`try` / `except` / pass), leaving the transaction **aborted**. On connection teardown,
 `commit()` rolled back — **including the truncate**.
 
-## Fix (landed PR [#427](https://github.com/synthet/image-scoring-backend/pull/427))
+## Fix (landed PR [#427](https://github.com/synthet/image-scoring-pipeline/pull/427))
 
 - Bind **integer** values (`1`, `1 if optional else 0`) or reuse the canonical seed path.
 - Ensure reseed failures **cannot silently undo** the truncate (visible log or separate transaction).
@@ -34,7 +34,7 @@ was swallowed (`try` / `except` / pass), leaving the transaction **aborted**. On
 |----|-----------|
 | AC-1 | After `truncate_app_tables()`, every table in `POSTGRES_APP_TABLES` is empty and `pipeline_phases` is re-seeded |
 | AC-2 | Reseed failure cannot roll back truncate without a visible error |
-| AC-3 | Full `-m postgres` suite re-run to surface ordering flakes (see also [#336](https://github.com/synthet/image-scoring-backend/issues/336) hang) |
+| AC-3 | Full `-m postgres` suite re-run to surface ordering flakes (see also [#336](https://github.com/synthet/image-scoring-pipeline/issues/336) hang) |
 
 ## Related
 

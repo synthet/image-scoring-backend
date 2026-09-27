@@ -28,9 +28,9 @@ okf_version: 0.1
 | **Session timestamp** | 2026-08-05 21:46:47 −0500 |
 | **Agent** | Cursor Agent |
 | **Model** | Cursor Grok 4.5 |
-| **Primary repo** | `image-scoring-backend` |
+| **Primary repo** | `image-scoring-pipeline` |
 | **Related repo** | `image-scoring-skills` (labelling harness) |
-| **Related issue** | [#317](https://github.com/synthet/image-scoring-backend/issues/317) |
+| **Related issue** | [#317](https://github.com/synthet/image-scoring-pipeline/issues/317) |
 | **Raw source** | [`../raw/2026-08-05-bird-crop-closeout-cursor.md`](../raw/2026-08-05-bird-crop-closeout-cursor.md) |
 | **Commit state at write time** | uncommitted |
 

@@ -15,7 +15,7 @@ okf_version: 0.1
 | **Session timestamp** | `2026-08-05T21:46:47-05:00` |
 | **Agent** | Cursor Agent |
 | **Model** | Cursor Grok 4.5 |
-| **Primary repo** | `image-scoring-backend` |
+| **Primary repo** | `image-scoring-pipeline` |
 | **Related repos** | `image-scoring-skills` (labelling harness), plan under `.cursor/plans/` |
 | **Transcript (this chat)** | `agent-transcripts/8f2173f2-d324-49e4-940d-fa0601f8e93b/` |
 

@@ -31,10 +31,10 @@ This page consolidates **two independent records of the same work**, written min
 | **Invoked from** | `D:\Projects\image-scoring-model` | `D:\Projects\image-scoring-model` |
 | **Raw source** | [`../raw/2026-08-01-student-scorer-e2-claude.md`](../raw/2026-08-01-student-scorer-e2-claude.md) | [`../raw/2026-08-05-student-scorer-e2-cursor.md`](../raw/2026-08-05-student-scorer-e2-cursor.md) |
 
-**Work target for both: `D:\Projects\image-scoring-backend`** — a different repo from the one they were
+**Work target for both: `D:\Projects\image-scoring-pipeline`** — a different repo from the one they were
 invoked in. Manifest `msm_8ef568a5db3d9f79` · protocol `ssp_429e3332d8ab` · contract
 `.agent/scratch/e2_autonomous_run_contract.md` · tracking issue
-[#323](https://github.com/synthet/image-scoring-backend/issues/323).
+[#323](https://github.com/synthet/image-scoring-pipeline/issues/323).
 
 The two records agree on every fact checked against each other; where only one carries a detail, this
 page keeps it.
@@ -181,7 +181,7 @@ or resume to `train_image_model.py` (considered and declined — it cannot help 
 4. Append one row to [`STUDENT_SCORER_RESULTS.md`](STUDENT_SCORER_RESULTS.md) under run ID
    **`2026-08-05-e2-convnext`** plus a dated `## 2026-08-05 — E2 ConvNeXt-Tiny (P0, last_stage)`
    subsection. Never edit prior rows. Append one entry to [`../log.md`](../log.md).
-5. Update issue [#323](https://github.com/synthet/image-scoring-backend/issues/323) and optionally
+5. Update issue [#323](https://github.com/synthet/image-scoring-pipeline/issues/323) and optionally
    [`STUDENT_SCORER_E2_CHECKPOINT.md`](STUDENT_SCORER_E2_CHECKPOINT.md).
 6. **Do not enable shadow or change fusion without a new human decision.**
 

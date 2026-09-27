@@ -1,7 +1,7 @@
 ﻿
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\ARCHITECTURE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\ARCHITECTURE.md
 # --------------------------------------------------
 
 # Architecture
@@ -26,7 +26,7 @@ Hub page — high-level layout and deep dives are split by topic.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\CANONICAL_SOURCES.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\CANONICAL_SOURCES.md
 # --------------------------------------------------
 
 # Canonical sources for agents and implementers
@@ -49,7 +49,7 @@ Use these as the authority before inventing API shapes, phase names, or schema d
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\DATABASE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\DATABASE.md
 # --------------------------------------------------
 
 # Database
@@ -76,7 +76,7 @@ Hub page — PostgreSQL (+ pgvector) is primary; Firebird is legacy.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\DEVELOPMENT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\DEVELOPMENT.md
 # --------------------------------------------------
 
 # Development
@@ -106,12 +106,12 @@ Hub page — canonical detail lives in linked docs.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\DIAGNOSTICS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\DIAGNOSTICS.md
 # --------------------------------------------------
 
 # Diagnostics
 
-This page lists **how to inspect** a local image-scoring-backend install without starting the full Web UI.
+This page lists **how to inspect** a local image-scoring-pipeline install without starting the full Web UI.
 
 ## Project doctor (CLI)
 
@@ -177,7 +177,7 @@ Typical locations (see also `get_server_log_tail`, `read_debug_log`, and `search
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\EMBEDDINGS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\EMBEDDINGS.md
 # --------------------------------------------------
 
 # Embeddings
@@ -191,7 +191,7 @@ Doctor checks **pgvector** when connected to PostgreSQL — [DIAGNOSTICS.md](DIA
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\EXPORT_PIPELINE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\EXPORT_PIPELINE.md
 # --------------------------------------------------
 
 # Export and integration outputs
@@ -207,7 +207,7 @@ For **debug / support exports** (redacted zip), see [DIAGNOSTICS.md](DIAGNOSTICS
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\IMAGE_PIPELINE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\IMAGE_PIPELINE.md
 # --------------------------------------------------
 
 # Image pipeline
@@ -237,12 +237,12 @@ Hub page — ingestion, metadata, scoring, and RAW/NEF behavior.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\INDEX.md
 # --------------------------------------------------
 
 # Documentation Index
 
-Complete index of all documentation files for **Vexlum Scoring** (`image-scoring-backend`).
+Complete index of all documentation files for **Vexlum Scoring** (`image-scoring-pipeline`).
 
 ---
 
@@ -427,7 +427,7 @@ Model specifications, scoring strategy, and fallback systems.
 
 | Document | Description |
 |----------|-------------|
-| [CROSS_APP_INTEGRATION_AUDIT.md](testing/CROSS_APP_INTEGRATION_AUDIT.md) | Audit of shared **image-scoring-backend** ↔ **image-scoring-gallery** integration coverage and gaps; gallery tasks: [`docs/integration/TODO.md`](https://github.com/synthet/image-scoring-gallery/blob/main/docs/integration/TODO.md) |
+| [CROSS_APP_INTEGRATION_AUDIT.md](testing/CROSS_APP_INTEGRATION_AUDIT.md) | Audit of shared **image-scoring-pipeline** ↔ **image-scoring-gallery** integration coverage and gaps; gallery tasks: [`docs/integration/TODO.md`](https://github.com/synthet/image-scoring-gallery/blob/main/docs/integration/TODO.md) |
 | [TEST_STATUS.md](testing/TEST_STATUS.md) | Unit test status overview |
 | [WSL_TESTS.md](testing/WSL_TESTS.md) | WSL-only pytest markers |
 | [archive/testing/DOCUMENTATION_ISSUES.md](archive/testing/DOCUMENTATION_ISSUES.md) | Archived pointer (issues folded into WSL_TESTS / TEST_STATUS) |
@@ -578,7 +578,7 @@ This documentation is an LLM-maintained wiki. See [WIKI_SCHEMA.md](WIKI_SCHEMA.m
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\log.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\log.md
 # --------------------------------------------------
 
 # Wiki Log
@@ -654,12 +654,12 @@ Established LLM wiki system. Created [WIKI_SCHEMA.md](WIKI_SCHEMA.md) (conventio
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\README.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\README.md
 # --------------------------------------------------
 
 # Documentation
 
-Complete documentation for **Vexlum Scoring** (`image-scoring-backend`).
+Complete documentation for **Vexlum Scoring** (`image-scoring-pipeline`).
 
 ## Quick Links
 
@@ -723,7 +723,7 @@ Cross-project protocol: [AGENT_COORDINATION.md](technical/AGENT_COORDINATION.md)
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\TESTING.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\TESTING.md
 # --------------------------------------------------
 
 # Testing
@@ -754,7 +754,7 @@ python -m pytest -m "not gpu and not db and not ml and not firebird" --ignore=te
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\TROUBLESHOOTING.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\TROUBLESHOOTING.md
 # --------------------------------------------------
 
 # Troubleshooting
@@ -784,10 +784,10 @@ Hub page — follow links for specific failure modes.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\WIKI_SCHEMA.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\WIKI_SCHEMA.md
 # --------------------------------------------------
 
-# Wiki schema — image-scoring-backend `docs/`
+# Wiki schema — image-scoring-pipeline `docs/`
 
 This repository keeps `docs/` as an LLM-maintained wiki: small pages, clear hubs, and stable links to canonical contracts.
 
@@ -840,7 +840,7 @@ Project commands under `.cursor/commands/` and `.claude/commands/` (`wiki-ingest
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\ai\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\ai\INDEX.md
 # --------------------------------------------------
 
 # AI & Agent Helpers — Index
@@ -854,7 +854,7 @@ Project commands under `.cursor/commands/` and `.claude/commands/` (`wiki-ingest
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\ai\LLM_CONTEXT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\ai\LLM_CONTEXT.md
 # --------------------------------------------------
 
 # Vexlum Project - LLM Context Guide
@@ -936,7 +936,7 @@ This project includes an MCP server exposing debugging tools to Cursor and agent
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\architecture\DB_CONNECTOR.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\architecture\DB_CONNECTOR.md
 # --------------------------------------------------
 
 # DB Connector — Architecture & Design
@@ -1361,7 +1361,7 @@ API directly in HTTP mode (bypassing both `db.py` and `db_connector/`).
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\architecture\microservices_proposal.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\architecture\microservices_proposal.md
 # --------------------------------------------------
 
 # Abstraction Layers — Implementation Plan
@@ -1500,7 +1500,7 @@ class ScoringRunner:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\architecture\pipeline-architecture.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\architecture\pipeline-architecture.md
 # --------------------------------------------------
 
 # Pipeline Architecture
@@ -1609,7 +1609,7 @@ flowchart LR
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\architecture\project-structure.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\architecture\project-structure.md
 # --------------------------------------------------
 
 # Project Structure
@@ -1692,7 +1692,7 @@ Key subfolders:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\architecture\system-overview.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\architecture\system-overview.md
 # --------------------------------------------------
 
 # Architecture Documentation
@@ -1767,7 +1767,7 @@ Batch runs are queued in the database and drained by a background dispatcher aft
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\architecture\technical-summary.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\architecture\technical-summary.md
 # --------------------------------------------------
 
 # Technical summary: Vexlum
@@ -1884,7 +1884,7 @@ The project utilizes a dual-framework approach forced by platform support:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\IMPLEMENTATION_SUMMARY_2025-01.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\IMPLEMENTATION_SUMMARY_2025-01.md
 # --------------------------------------------------
 
 # Implementation Summary - January 2025
@@ -2074,7 +2074,7 @@ All implementations follow project conventions:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\INDEX.md
 # --------------------------------------------------
 
 # Archive (Legacy / Deprecated) — Index
@@ -2118,7 +2118,7 @@ These files are preserved for historical reference but describe features that ha
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\MODEL_FALLBACK_MECHANISM.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\MODEL_FALLBACK_MECHANISM.md
 # --------------------------------------------------
 
 # Model Fallback Mechanism (Legacy)
@@ -2548,7 +2548,7 @@ self.model_sources = {
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\PROPOSALS_OLD.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\PROPOSALS_OLD.md
 # --------------------------------------------------
 
 # Proposed WebUI Improvements
@@ -2583,7 +2583,7 @@ Based on the analysis of the current `webui.py` and backend modules, here are th
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\TRIPLE_FALLBACK_SYSTEM.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\TRIPLE_FALLBACK_SYSTEM.md
 # --------------------------------------------------
 
 # Triple Fallback System (Legacy)
@@ -3119,7 +3119,7 @@ Triple fallback:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\UNCOMMITTED_CHANGES_ANALYSIS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\UNCOMMITTED_CHANGES_ANALYSIS.md
 # --------------------------------------------------
 
 # Analysis and Summary of Uncommitted Changes
@@ -3368,7 +3368,7 @@ The changes implement a **multi-model, multi-source image quality assessment sys
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\plans\database\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\plans\database\INDEX.md
 # --------------------------------------------------
 
 # Archive — Phase 4 database plans (historical nodes)
@@ -3400,7 +3400,7 @@ Point-in-time execution reports, Phase 4b implementation artifacts, and supersed
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\plans\database\PHASE4B_FIREBIRD_VERIFICATION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\plans\database\PHASE4B_FIREBIRD_VERIFICATION.md
 # --------------------------------------------------
 
 ---
@@ -3854,7 +3854,7 @@ else:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\plans\database\PHASE4B_IMPLEMENTATION_STEPS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\plans\database\PHASE4B_IMPLEMENTATION_STEPS.md
 # --------------------------------------------------
 
 ---
@@ -4721,7 +4721,7 @@ Ready to proceed? Let me know if you want to start with Step 1.1!
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\plans\database\PHASE4B_KEYWORD_READER_AUDIT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\plans\database\PHASE4B_KEYWORD_READER_AUDIT.md
 # --------------------------------------------------
 
 ---
@@ -5241,7 +5241,7 @@ def get_images_by_folder(folder_path):
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\plans\database\PHASE4B_REVIEW_AND_REFINEMENT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\plans\database\PHASE4B_REVIEW_AND_REFINEMENT.md
 # --------------------------------------------------
 
 ---
@@ -5812,7 +5812,7 @@ After decisions made:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\plans\database\PHASE4B_TEST_CHECKLIST.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\plans\database\PHASE4B_TEST_CHECKLIST.md
 # --------------------------------------------------
 
 ---
@@ -6088,7 +6088,7 @@ See PHASE4B_IMPLEMENTATION_STEPS.md Part 6 for full rollback procedure.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\plans\database\PHASE4_CODE_AUDIT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\plans\database\PHASE4_CODE_AUDIT.md
 # --------------------------------------------------
 
 ---
@@ -6417,7 +6417,7 @@ c.execute("UPDATE images SET keywords = ? WHERE id = ?", (tags_str, image_id))
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\plans\database\PHASE4_COMPLETION_SUMMARY.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\plans\database\PHASE4_COMPLETION_SUMMARY.md
 # --------------------------------------------------
 
 ---
@@ -6835,7 +6835,7 @@ TODO.md:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\plans\database\PHASE4_EXECUTION_REPORT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\plans\database\PHASE4_EXECUTION_REPORT.md
 # --------------------------------------------------
 
 ---
@@ -7100,7 +7100,7 @@ modules/
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\plans\database\PHASE4_IMPLEMENTATION_STATUS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\plans\database\PHASE4_IMPLEMENTATION_STATUS.md
 # --------------------------------------------------
 
 ---
@@ -7354,7 +7354,7 @@ By end of Phase 4d (v7.0):
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\plans\database\PHASE4_RESULTS_SNAPSHOT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\plans\database\PHASE4_RESULTS_SNAPSHOT.md
 # --------------------------------------------------
 
 ---
@@ -7580,7 +7580,7 @@ Avg keywords/image:      5.8
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\plans\database\PHASE4_SUMMARY.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\plans\database\PHASE4_SUMMARY.md
 # --------------------------------------------------
 
 ---
@@ -7697,7 +7697,7 @@ Four-phase timeline for safely removing legacy `IMAGES.KEYWORDS`:
 
 1. **Run consistency check:**
    ```bash
-   cd /path/to/image-scoring-backend
+   cd /path/to/image-scoring-pipeline
    python scripts/db/phase4_consistency_check.py
    ```
    - Document results in a new `PHASE4_RESULTS_SNAPSHOT.md`
@@ -7802,7 +7802,7 @@ Four-phase timeline for safely removing legacy `IMAGES.KEYWORDS`:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\reports\2026_02_09_CODE_AND_DESIGN_REVIEW.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\reports\2026_02_09_CODE_AND_DESIGN_REVIEW.md
 # --------------------------------------------------
 
 # Code Review and Design Review (2026-02-09)
@@ -7911,7 +7911,7 @@ RAW conversion in `PrepWorker` creates a fresh `MultiModelMUSIQ(skip_gpu=True)` 
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\reports\CODE_DESIGN_REVIEW_legacy.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\reports\CODE_DESIGN_REVIEW_legacy.md
 # --------------------------------------------------
 
 # Comprehensive Code & Design Review Summary Report
@@ -8081,7 +8081,7 @@ The March 3 remediation addressed 9 of 12 critical findings, eliminated all bare
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\reports\FIX_PLAN_runs_audit_2026-04-22.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\reports\FIX_PLAN_runs_audit_2026-04-22.md
 # --------------------------------------------------
 
 # Fix Plan — Runs/DB/Logs audit (2026-04-22)
@@ -8301,7 +8301,7 @@ Separate commits / PRs for FIX-1, FIX-2, FIX-3, FIX-4, FIX-5. Each should be eas
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\reports\RCA_runs_audit_2026-04-22.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\reports\RCA_runs_audit_2026-04-22.md
 # --------------------------------------------------
 
 # RCA — Runs/DB/Logs audit (2026-04-22)
@@ -8472,7 +8472,7 @@ Health handler is probably grabbing the same DB connection pool or sync lock the
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\reports\debugging-sessions\CLEANUP_SUMMARY.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\reports\debugging-sessions\CLEANUP_SUMMARY.md
 # --------------------------------------------------
 
 # Debug Artifacts Cleanup Summary
@@ -8637,7 +8637,7 @@ ls .cursor/debug.log
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\reports\debugging-sessions\CODE_CHANGES_LOG.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\reports\debugging-sessions\CODE_CHANGES_LOG.md
 # --------------------------------------------------
 
 # Code Changes Log - Fullscreen Image Feature
@@ -9101,7 +9101,7 @@ If changes need to be reverted:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\reports\debugging-sessions\DEBUGGING_LOG.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\reports\debugging-sessions\DEBUGGING_LOG.md
 # --------------------------------------------------
 
 # Debugging Session Log - Fullscreen Image Feature
@@ -9414,7 +9414,7 @@ Use runtime evidence over code inspection:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\reports\debugging-sessions\FULLSCREEN_IMAGE_INVESTIGATION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\reports\debugging-sessions\FULLSCREEN_IMAGE_INVESTIGATION.md
 # --------------------------------------------------
 
 # Fullscreen Image Display Investigation
@@ -9699,7 +9699,7 @@ async def source_image_endpoint(path: str):
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\reports\debugging-sessions\FULLSCREEN_NAVIGATION_ISSUE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\reports\debugging-sessions\FULLSCREEN_NAVIGATION_ISSUE.md
 # --------------------------------------------------
 
 # Fullscreen Navigation Issue (Persistent)
@@ -9741,7 +9741,7 @@ The user reports the issue **still persists**. This suggests:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\reports\debugging-sessions\GRADIO_ROUTING_ISSUE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\reports\debugging-sessions\GRADIO_ROUTING_ISSUE.md
 # --------------------------------------------------
 
 # Gradio Custom FastAPI Route Registration Issue
@@ -9980,7 +9980,7 @@ Run separate FastAPI server on different port for image serving.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\reports\debugging-sessions\GRADIO_ROUTING_RESOLUTION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\reports\debugging-sessions\GRADIO_ROUTING_RESOLUTION.md
 # --------------------------------------------------
 
 # Gradio Routing Issue Resolution
@@ -10025,7 +10025,7 @@ The mounting strategy provides a robust foundation for hybrid Gradio/FastAPI app
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\reports\debugging-sessions\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\reports\debugging-sessions\INDEX.md
 # --------------------------------------------------
 
 # Debugging Sessions — Index
@@ -10047,7 +10047,7 @@ Historical debugging session notes and issue resolutions.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\testing\DOCUMENTATION_ISSUES.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\testing\DOCUMENTATION_ISSUES.md
 # --------------------------------------------------
 
 # (Archived) Testing documentation issues tracker
@@ -10062,7 +10062,7 @@ Actionable gaps were folded into the living docs below; this file is kept as a *
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\vila\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\vila\INDEX.md
 # --------------------------------------------------
 
 # VILA (Archived) — Index
@@ -10080,7 +10080,7 @@ VILA model integration is disabled v2.5.1+, replaced by LIQE.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\vila\README_VILA.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\vila\README_VILA.md
 # --------------------------------------------------
 
 # VILA Model Integration (Legacy/Disabled)
@@ -10309,7 +10309,7 @@ VILA models are fully integrated with existing batch processing and gallery gene
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\vila\VILA_BATCH_FILES_GUIDE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\vila\VILA_BATCH_FILES_GUIDE.md
 # --------------------------------------------------
 
 # VILA Batch Files Usage Guide
@@ -10558,7 +10558,7 @@ For issues or questions:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\archive\vila\VILA_QUICK_START.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\archive\vila\VILA_QUICK_START.md
 # --------------------------------------------------
 
 # VILA Quick Start Guide
@@ -10761,7 +10761,7 @@ Images will be automatically reprocessed with the correct VILA model path (v2.1.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\design\DESIGN_SYSTEM.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\design\DESIGN_SYSTEM.md
 # --------------------------------------------------
 
 # Design system — palette and icon contract
@@ -10769,7 +10769,7 @@ Images will be automatically reprocessed with the correct VILA model path (v2.1.
 Canonical source for colors, icons, and sizing across both projects. The same
 contract applies to:
 
-- **`image-scoring-backend/frontend`** — React + Tailwind v4 SPA at `/ui/` (token source: [`frontend/src/index.css`](../../frontend/src/index.css))
+- **`image-scoring-pipeline/frontend`** — React + Tailwind v4 SPA at `/ui/` (token source: [`frontend/src/index.css`](../../frontend/src/index.css))
 - **`image-scoring-gallery`** — Electron + React + CSS Modules (token source: [`src/styles/tokens.css`](https://github.com/synthet/image-scoring-gallery/blob/main/src/styles/tokens.css))
 
 The two products share a VS Code Dark+ visual identity. Anything else (Material
@@ -10967,7 +10967,7 @@ For agents touching legacy code:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\design\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\design\INDEX.md
 # --------------------------------------------------
 
 # Design — Index
@@ -10991,7 +10991,7 @@ HTML and Python mockups for the pipeline UI:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\implemented\01-pipeline-and-runs.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\implemented\01-pipeline-and-runs.md
 # --------------------------------------------------
 
 # Pipeline and runs
@@ -11018,7 +11018,7 @@ HTML and Python mockups for the pipeline UI:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\implemented\02-scoring-and-models.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\implemented\02-scoring-and-models.md
 # --------------------------------------------------
 
 # Scoring and models
@@ -11042,7 +11042,7 @@ HTML and Python mockups for the pipeline UI:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\implemented\03-tagging-and-keywords.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\implemented\03-tagging-and-keywords.md
 # --------------------------------------------------
 
 # Tagging and keywords
@@ -11065,7 +11065,7 @@ HTML and Python mockups for the pipeline UI:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\implemented\04-clustering-culling-stacks.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\implemented\04-clustering-culling-stacks.md
 # --------------------------------------------------
 
 # Clustering, culling, and stacks
@@ -11086,7 +11086,7 @@ HTML and Python mockups for the pipeline UI:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\implemented\05-embeddings-and-similarity.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\implemented\05-embeddings-and-similarity.md
 # --------------------------------------------------
 
 # Embeddings and similarity
@@ -11110,7 +11110,7 @@ HTML and Python mockups for the pipeline UI:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\implemented\06-import-metadata-thumbnails-raw.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\implemented\06-import-metadata-thumbnails-raw.md
 # --------------------------------------------------
 
 # Import, metadata, thumbnails, and RAW preview
@@ -11136,7 +11136,7 @@ HTML and Python mockups for the pipeline UI:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\implemented\07-webui-and-operator-surfaces.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\implemented\07-webui-and-operator-surfaces.md
 # --------------------------------------------------
 
 # WebUI and operator surfaces
@@ -11160,7 +11160,7 @@ HTML and Python mockups for the pipeline UI:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\implemented\08-mcp-and-agents.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\implemented\08-mcp-and-agents.md
 # --------------------------------------------------
 
 # MCP and agents
@@ -11178,7 +11178,7 @@ HTML and Python mockups for the pipeline UI:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\implemented\09-configuration-and-limits.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\implemented\09-configuration-and-limits.md
 # --------------------------------------------------
 
 # Configuration and limits
@@ -11200,7 +11200,7 @@ HTML and Python mockups for the pipeline UI:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\implemented\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\implemented\INDEX.md
 # --------------------------------------------------
 
 # Features — implemented (catalog)
@@ -11226,7 +11226,7 @@ Routing catalog for **shipped** product behavior: what exists, which modules own
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\fix-thumbnail-generation-spec.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\fix-thumbnail-generation-spec.md
 # --------------------------------------------------
 
 # Fix: Run Thumbnail Generation Failure
@@ -11389,7 +11389,7 @@ New `reconcile_duplicate_running_job_phases()` function repairs historical data 
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\image-identity-and-hashing-improvements.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\image-identity-and-hashing-improvements.md
 # --------------------------------------------------
 
 # Plan: Image identity, hashing, and indexing improvements
@@ -11531,14 +11531,14 @@ Optional doc-only improvement: short **developer-facing** section in `docs/techn
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\import-discovery-alignment.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\import-discovery-alignment.md
 # --------------------------------------------------
 
 # Plan: Align Gallery Import with Pipeline Discovery (Indexing)
 
 **Status:** Proposal  
 **Date:** 2026-04-10  
-**Repos:** [image-scoring-backend](https://github.com/synthet/image-scoring-backend) (primary), [image-scoring-gallery](https://github.com/synthet/image-scoring-gallery) (client)
+**Repos:** [image-scoring-pipeline](https://github.com/synthet/image-scoring-pipeline) (primary), [image-scoring-gallery](https://github.com/synthet/image-scoring-gallery) (client)
 
 ---
 
@@ -11663,7 +11663,7 @@ Users expect **Import** to do what a **Discovery** stage does for a folder. Toda
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\INDEX.md
 # --------------------------------------------------
 
 # Features — planned (index)
@@ -11684,7 +11684,7 @@ Specs and proposals for product work not yet fully shipped. **Database / migrati
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\ui-pipeline-redesign.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\ui-pipeline-redesign.md
 # --------------------------------------------------
 
 # Pipeline-Centric UI Redesign
@@ -12166,7 +12166,7 @@ Current timer updates 13+ components across 4 tabs. New timer updates ~10 compon
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\ux-ui-implementation-plan.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\ux-ui-implementation-plan.md
 # --------------------------------------------------
 
 # UX/UI Implementation Plan
@@ -12324,7 +12324,7 @@ Rationale for this pattern over alternatives:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\embeddings\EMBEDDING_APPLICATIONS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\embeddings\EMBEDDING_APPLICATIONS.md
 # --------------------------------------------------
 
 # Possible Applications of `image_embedding`
@@ -12472,7 +12472,7 @@ All suggestions reuse the existing `image_embedding` column and `db.get_embeddin
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\embeddings\EMBEDDING_APPLICATIONS_INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\embeddings\EMBEDDING_APPLICATIONS_INDEX.md
 # --------------------------------------------------
 
 # Embedding Applications - Detailed Specs
@@ -12500,7 +12500,7 @@ This index breaks out each proposed `image_embedding` use case into a separate i
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\embeddings\EMBEDDING_APP_01_DIVERSITY_SELECTION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\embeddings\EMBEDDING_APP_01_DIVERSITY_SELECTION.md
 # --------------------------------------------------
 
 # 01 - Diversity-Aware Selection
@@ -12591,7 +12591,7 @@ Add optional settings:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\embeddings\EMBEDDING_APP_02_NEAR_DUPLICATE_DETECTION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\embeddings\EMBEDDING_APP_02_NEAR_DUPLICATE_DETECTION.md
 # --------------------------------------------------
 
 # 02 - Near-Duplicate Detection
@@ -12683,7 +12683,7 @@ Each duplicate group entry can include:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\embeddings\EMBEDDING_APP_03_TAG_PROPAGATION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\embeddings\EMBEDDING_APP_03_TAG_PROPAGATION.md
 # --------------------------------------------------
 
 # 03 - Tag Propagation from Embedding Neighbors
@@ -12784,7 +12784,7 @@ To keep auditability:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\embeddings\EMBEDDING_APP_04_OUTLIER_DETECTION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\embeddings\EMBEDDING_APP_04_OUTLIER_DETECTION.md
 # --------------------------------------------------
 
 # 04 - Outlier and Anomaly Detection
@@ -12884,7 +12884,7 @@ This makes review actionable and reduces false alarm skepticism.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\embeddings\EMBEDDING_APP_05_2D_EMBEDDING_MAP.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\embeddings\EMBEDDING_APP_05_2D_EMBEDDING_MAP.md
 # --------------------------------------------------
 
 # 05 - 2D Embedding Map (Visual Collection Explorer)
@@ -13048,7 +13048,7 @@ Belongs in [image-scoring-gallery](https://github.com/synthet/image-scoring-gall
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\embeddings\EMBEDDING_APP_06_SMART_STACK_REPRESENTATIVE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\embeddings\EMBEDDING_APP_06_SMART_STACK_REPRESENTATIVE.md
 # --------------------------------------------------
 
 # 06 - Smart Stack Representative (Centroid-Aware Best Image)
@@ -13130,7 +13130,7 @@ Pick image with highest `final_i`.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\embeddings\EMBEDDING_APP_07_MORE_LIKE_THIS_UI.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\embeddings\EMBEDDING_APP_07_MORE_LIKE_THIS_UI.md
 # --------------------------------------------------
 
 # 07 - "More Like This" Cross-Folder UI
@@ -13214,7 +13214,7 @@ From image cards/detail view, add "Find Similar" action:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\embeddings\EMBEDDING_APP_08_GRADIO_INTEGRATION_PLAN.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\embeddings\EMBEDDING_APP_08_GRADIO_INTEGRATION_PLAN.md
 # --------------------------------------------------
 
 # Electron-Python Integration Design Plan
@@ -13749,7 +13749,7 @@ sequenceDiagram
 
 ## Summary of Changes by File
 
-### Python repo (`image-scoring-backend`)
+### Python repo (`image-scoring-pipeline`)
 
 - `modules/events.py` -- Add `CommandDispatcher` class (action registry, `handle()`, unicast `send_to()`)
 - `webui.py` -- Wire `command_dispatcher.handle()` into WS receive loop (replace `pass`)
@@ -13786,7 +13786,7 @@ sequenceDiagram
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\embeddings\NEXT_STEPS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\embeddings\NEXT_STEPS.md
 # --------------------------------------------------
 
 # Embedding Features: Next Steps Roadmap
@@ -13860,7 +13860,7 @@ Similarity REST routes (search, duplicates, outliers) are listed in the root [TO
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\features\planned\embeddings\TODO.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\features\planned\embeddings\TODO.md
 # --------------------------------------------------
 
 # Embedding features — task index (retired)
@@ -13874,7 +13874,7 @@ Workflow / Stage contract: [`docs/project/00-backlog-workflow.md`](../../../proj
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\gallery\API_TYPES.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\gallery\API_TYPES.md
 # --------------------------------------------------
 
 # Gallery API Types Regeneration
@@ -13909,7 +13909,7 @@ If validation fails, it prints a diff and asks you to re-run `npm run api:types:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\gallery\GALLERY_CREATION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\gallery\GALLERY_CREATION.md
 # --------------------------------------------------
 
 # MUSIQ Image Gallery Creation Guide
@@ -14061,7 +14061,7 @@ Remove-Item "D:\Photos\YourFolder\*.json"
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\gallery\GALLERY_GUIDE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\gallery\GALLERY_GUIDE.md
 # --------------------------------------------------
 
 # MUSIQ Image Quality Gallery
@@ -14156,7 +14156,7 @@ Chrome, Edge, Firefox, Safari, and mobile browsers — full support.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\gallery\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\gallery\INDEX.md
 # --------------------------------------------------
 
 # Gallery — Index
@@ -14173,7 +14173,7 @@ Chrome, Edge, Firefox, Safari, and mobile browsers — full support.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\gallery\QUICK_REFERENCE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\gallery\QUICK_REFERENCE.md
 # --------------------------------------------------
 
 # QUICK REFERENCE - Gallery Creation
@@ -14247,7 +14247,7 @@ create_gallery.bat "D:\Photos\YourFolder"
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\INDEX.md
 # --------------------------------------------------
 
 # Guides — index
@@ -14264,7 +14264,7 @@ Operator and environment documentation.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\getting-started\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\getting-started\INDEX.md
 # --------------------------------------------------
 
 # Getting Started — Index
@@ -14279,7 +14279,7 @@ Operator and environment documentation.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\getting-started\SCORING_GUIDE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\getting-started\SCORING_GUIDE.md
 # --------------------------------------------------
 
 # Instructions: Running Vexlum Scoring on Nikon NEF Files
@@ -14431,7 +14431,7 @@ Or drag and drop the folder onto the `process_nef_folder.bat` file.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\getting-started\SIMPLE_CLI_GUIDE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\getting-started\SIMPLE_CLI_GUIDE.md
 # --------------------------------------------------
 
 # MUSIQ: Multi-scale Image Quality Transformer - Simple CLI Tool
@@ -14565,7 +14565,7 @@ This implementation is for educational and demonstration purposes. The original 
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\setup\DOCKER_SETUP.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\setup\DOCKER_SETUP.md
 # --------------------------------------------------
 
 # Docker Setup Guide
@@ -14688,7 +14688,7 @@ docker compose build
 If your project lives somewhere other than the path you first configured, edit `FIREBIRD_WIN_DB_PATH` in `docker-compose.yml` (or set it in `.env`) to your actual host path. Use **forward slashes** — backslashes are not YAML-safe:
 
 ```yaml
-- FIREBIRD_WIN_DB_PATH=E:/MyProject/image-scoring-backend/SCORING_HISTORY.FDB
+- FIREBIRD_WIN_DB_PATH=E:/MyProject/image-scoring-pipeline/SCORING_HISTORY.FDB
 ```
 
 After changing this value run `docker compose down && docker compose up` (full recreate) so the new env var is picked up.
@@ -14880,7 +14880,7 @@ sudo groupdel docker
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\setup\ENVIRONMENTS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\setup\ENVIRONMENTS.md
 # --------------------------------------------------
 
 # Virtual Environments and Script Usage
@@ -14967,7 +14967,7 @@ For any script that uses `modules`, the database, or config (e.g. under `scripts
 
 - **From WSL** (recommended):
   ```bash
-  cd /path/to/image-scoring-backend   # use your WSL path to the repo
+  cd /path/to/image-scoring-pipeline   # use your WSL path to the repo
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/FirebirdLinux/Firebird-5.0.0.1306-0-linux-x64/opt/firebird/lib
   source ~/.venvs/tf/bin/activate
   python scripts/path/to/script.py
@@ -14992,7 +14992,7 @@ See also: [Python & Dependency Version Caveats](PYTHON_VERSION_CAVEATS.md).
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\setup\GPU_SETUP.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\setup\GPU_SETUP.md
 # --------------------------------------------------
 
 # GPU Setup Guide
@@ -15095,7 +15095,7 @@ python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU')
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\setup\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\setup\INDEX.md
 # --------------------------------------------------
 
 # Setup & Deployment — Index
@@ -15138,7 +15138,7 @@ python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU')
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\setup\install_cuda.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\setup\install_cuda.md
 # --------------------------------------------------
 
 # CUDA Installation Guide for RTX 4060
@@ -15254,7 +15254,7 @@ Once working, you should see:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\setup\PYTHON_VERSION_CAVEATS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\setup\PYTHON_VERSION_CAVEATS.md
 # --------------------------------------------------
 
 # Python & Dependency Version Caveats
@@ -15284,7 +15284,7 @@ If you are on Python 3.12, use the WSL/Linux path with `requirements/requirement
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\setup\WINDOWS_SCRIPTS_README.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\setup\WINDOWS_SCRIPTS_README.md
 # --------------------------------------------------
 
 # Windows Scripts for MUSIQ GPU Runner
@@ -15550,7 +15550,7 @@ Choose the method that works best for your workflow and enjoy 6x faster image qu
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\setup\WINDOWS_WSL_DEPLOYMENT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\setup\WINDOWS_WSL_DEPLOYMENT.md
 # --------------------------------------------------
 
 # Deployment Guide: Vexlum Scoring on Windows (WSL2)
@@ -15724,7 +15724,7 @@ python scripts/python/run_all_musiq_models.py --help
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\setup\WSL2_TENSORFLOW_GPU_SETUP.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\setup\WSL2_TENSORFLOW_GPU_SETUP.md
 # --------------------------------------------------
 
 # WSL2 + Ubuntu TensorFlow GPU Setup Guide
@@ -15942,7 +15942,7 @@ If you encounter issues:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\setup\WSL_PYTHON_PACKAGES.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\setup\WSL_PYTHON_PACKAGES.md
 # --------------------------------------------------
 
 # Python Packages in WSL2 Ubuntu Environment
@@ -16117,7 +16117,7 @@ pip install -r requirements.txt
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\setup\WSL_UBUNTU_PACKAGES.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\setup\WSL_UBUNTU_PACKAGES.md
 # --------------------------------------------------
 
 # Ubuntu Packages in WSL2 Environment
@@ -16416,7 +16416,7 @@ sudo apt-get upgrade -s
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\guides\setup\WSL_WRAPPER_VERIFICATION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\guides\setup\WSL_WRAPPER_VERIFICATION.md
 # --------------------------------------------------
 
 # WSL Python Wrapper Verification for MUSIQ + LIQE Processing
@@ -16569,7 +16569,7 @@ if %errorlevel% == 0 (
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\db-refactor-decomposition.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\db-refactor-decomposition.md
 # --------------------------------------------------
 
 # DB.py God Object Refactoring Plan
@@ -17214,7 +17214,7 @@ If a phase fails:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\import-phase-enrichment.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\import-phase-enrichment.md
 # --------------------------------------------------
 
 # Prompt: Import Phase Enrichment — close the data gaps that stall later phases
@@ -17287,7 +17287,7 @@ Extend `register_image_for_import()` (and the indexing walker in [modules/indexi
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\INDEX.md
 # --------------------------------------------------
 
 # Planning & migrations — index
@@ -17353,7 +17353,7 @@ Aligned with root [`TODO.md`](../../TODO.md) **Highest-Impact Next Steps**. Tier
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\database\DB_SCHEMA_REFACTOR_IMPLEMENTATION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\database\DB_SCHEMA_REFACTOR_IMPLEMENTATION.md
 # --------------------------------------------------
 
 # DB Schema Refactor: Hybrid 3NF + Performance Hardening — Implementation Guide
@@ -17385,7 +17385,7 @@ This guide implements the phased refactor described in `DB_SCHEMA_REFACTOR_PLAN.
 ## Architecture & Approach
 
 ### Schema Authority
-- **Python backend:** [db.py](https://github.com/synthet/image-scoring-backend/blob/main/modules/db.py)
+- **Python backend:** [db.py](https://github.com/synthet/image-scoring-pipeline/blob/main/modules/db.py)
   - `_init_db_impl()` (line 1009) owns all DDL via try/except migration blocks
   - New migration blocks inserted **before** `conn.close()` at line 1564
   - Uses `_table_exists()`, `_column_exists()`, `_index_exists()`, `_constraint_exists()` helpers (lines ~980-1007)
@@ -17497,7 +17497,7 @@ def _backup_db_gbak(suffix=""):
 
 **Goal:** Fix orphan data, add missing indexes, enforce FKs, remove duplicates. No IPC contract changes.
 
-**File:** [db.py](https://github.com/synthet/image-scoring-backend/blob/main/modules/db.py)
+**File:** [db.py](https://github.com/synthet/image-scoring-pipeline/blob/main/modules/db.py)
 **Insert location:** Before `conn.close()` at line 1564 (just before `# Seed phases` comment)
 
 ### Implementation Steps
@@ -18664,7 +18664,7 @@ ALTER TABLE images DROP label;
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\database\DB_SCHEMA_REFACTOR_PLAN.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\database\DB_SCHEMA_REFACTOR_PLAN.md
 # --------------------------------------------------
 
 # DB Schema Refactor Plan: Refined (Hybrid 3NF + Performance Hardening)
@@ -18825,7 +18825,7 @@ Target file: [modules/db.py](../../modules/db.py) — confirmed as the main DB q
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\database\DB_STATUS_REPORT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\database\DB_STATUS_REPORT.md
 # --------------------------------------------------
 
 # Database Refactor Status Report
@@ -18914,7 +18914,7 @@ See **[POSTGRES_SCHEMA_OPTIMIZATIONS.md](POSTGRES_SCHEMA_OPTIMIZATIONS.md)** for
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\database\DB_VECTORS_REFACTOR.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\database\DB_VECTORS_REFACTOR.md
 # --------------------------------------------------
 
 ---
@@ -19130,18 +19130,18 @@ flowchart TD
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\database\FIREBIRD_POSTGRES_MIGRATION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\database\FIREBIRD_POSTGRES_MIGRATION.md
 # --------------------------------------------------
 
 # Refined Cross-Repo Migration Plan: Firebird -> PostgreSQL + pgvector
 
 Date: 2026-03-08 (updated 2026-04-01)  
 Status: **Decommissioning Complete** — Firebird infrastructure removed; system fully PostgreSQL-native.  
-Scope: **image-scoring-backend** + **image-scoring-gallery** coordinated migration
+Scope: **image-scoring-pipeline** + **image-scoring-gallery** coordinated migration
 
 ## Summary
 
-- Treat this as a **coordinated platform migration** across both repos (**image-scoring-backend** and **image-scoring-gallery**), not a frontend-only or backend-only DB split.
+- Treat this as a **coordinated platform migration** across both repos (**image-scoring-pipeline** and **image-scoring-gallery**), not a frontend-only or backend-only DB split.
 - Keep your selected rollout defaults: **phased dual-write**, **Postgres in local Docker**, **Python app + MCP as day-1 cutover scope**.
 - Add explicit **Electron migration gates** before final Firebird retirement, aligned with Electron docs that currently recommend Firebird until coordinated migration is ready.
 
@@ -19175,7 +19175,7 @@ Scope: **image-scoring-backend** + **image-scoring-gallery** coordinated migrati
 
 ## Public API / Interface Changes
 
-- **image-scoring-backend** (`config.json`) keys:
+- **image-scoring-pipeline** (`config.json`) keys:
 - `database.engine` (`firebird|postgres`)
 - `database.filename` (used by Firebird mode)
 - optional `database.dual_write` (Firebird primary write + Postgres secondary write)
@@ -19440,7 +19440,7 @@ The `_translate_fb_to_pg()` function in `modules/db.py` remains active. It allow
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\database\NEXT_STEPS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\database\NEXT_STEPS.md
 # --------------------------------------------------
 
 # Database Refactor: Remaining Next Steps
@@ -19500,7 +19500,7 @@ See the detailed **[PostgreSQL Optimization Roadmap](POSTGRES_SCHEMA_OPTIMIZATIO
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\database\PHASE4C_SOFT_DEPRECATION_PLAN.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\database\PHASE4C_SOFT_DEPRECATION_PLAN.md
 # --------------------------------------------------
 
 ---
@@ -19807,7 +19807,7 @@ See `PHASE4_KEYWORDS_DEPRECATION.md` for full timeline.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\database\PHASE4_KEYWORDS_DEPRECATION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\database\PHASE4_KEYWORDS_DEPRECATION.md
 # --------------------------------------------------
 
 ---
@@ -20004,7 +20004,7 @@ If Electron hasn't migrated by v7.0:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\database\PHASE4_KEYWORDS_HUB.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\database\PHASE4_KEYWORDS_HUB.md
 # --------------------------------------------------
 
 # Phase 4 keywords — documentation hub
@@ -20047,7 +20047,7 @@ Execution reports, Phase 4b step-by-step docs, audits, and superseded status pag
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\database\PHASE4_STATUS_SUMMARY.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\database\PHASE4_STATUS_SUMMARY.md
 # --------------------------------------------------
 
 ---
@@ -20332,7 +20332,7 @@ For Phase 4 coordination:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\database\POSTGRES_SCHEMA_OPTIMIZATIONS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\database\POSTGRES_SCHEMA_OPTIMIZATIONS.md
 # --------------------------------------------------
 
 # PostgreSQL schema analysis, structure, and optimization roadmap
@@ -20448,7 +20448,7 @@ flowchart TB
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\database\STATUS_VOCABULARY.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\database\STATUS_VOCABULARY.md
 # --------------------------------------------------
 
 # Status vocabulary inventory
@@ -20653,7 +20653,7 @@ Then add `CHECK (status IN ('pending', 'queued', 'running', 'paused', 'user_paus
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\models\IQA_MODEL_STACK_UPDATE_PROPOSAL.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\models\IQA_MODEL_STACK_UPDATE_PROPOSAL.md
 # --------------------------------------------------
 
 # Design Proposal: Modernize the Image Quality & Aesthetic Scoring Stack
@@ -21021,7 +21021,7 @@ This change reduces the current heterogeneous, legacy-heavy ensemble into a **mo
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\models\SUGGESTED_SCORING_ADJUSTMENTS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\models\SUGGESTED_SCORING_ADJUSTMENTS.md
 # --------------------------------------------------
 
 # Suggested Adjustments to Scoring Weights
@@ -21083,7 +21083,7 @@ If you adopt **QPT V2** or **AesMamba**, you can eventually:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\refactoring\REFACTORING_PLAN.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\refactoring\REFACTORING_PLAN.md
 # --------------------------------------------------
 
 # Refactoring Plan for webui.py
@@ -21252,7 +21252,7 @@ Each tab's `create_tab()` function returns a dictionary. To ensure type safety a
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\refactoring\STACK_CULLING_REFACTOR_PLAN.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\refactoring\STACK_CULLING_REFACTOR_PLAN.md
 # --------------------------------------------------
 
 # Refactoring & Redesign Plan: Unified Stack + Culling Feature
@@ -21968,7 +21968,7 @@ integration cases:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\planning\setup\WINDOWS_NATIVE_WEBUI_PLAN.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\planning\setup\WINDOWS_NATIVE_WEBUI_PLAN.md
 # --------------------------------------------------
 
 # Windows Native WebUI Environment Plan
@@ -22162,7 +22162,7 @@ For users wanting GPU acceleration:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\project\00-backlog-workflow.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\project\00-backlog-workflow.md
 # --------------------------------------------------
 
 # Backlog workflow — claiming work, tracking status, keeping the queue truthful
@@ -22172,7 +22172,7 @@ The canonical task queue is the **GitHub Project board**:
 **→ https://github.com/users/synthet/projects/1**
 
 It surfaces issues from both repos:
-- `synthet/image-scoring-backend` (this repo) — backend, FastAPI, DB schema
+- `synthet/image-scoring-pipeline` (this repo) — backend, FastAPI, DB schema
 - `synthet/image-scoring-gallery` — Electron / React UI
 
 This document is the **operating contract** every agent (human or AI) must follow
@@ -22224,7 +22224,7 @@ Either run the slash command (Claude Code):
 Or run the equivalent `gh` commands manually:
 
 ```bash
-# Replace <N> with the issue number, <repo> with image-scoring-backend or image-scoring-gallery
+# Replace <N> with the issue number, <repo> with image-scoring-pipeline or image-scoring-gallery
 gh issue edit <N> --repo synthet/<repo> --add-assignee @me
 
 # Move the card to Claimed
@@ -22300,7 +22300,7 @@ for cross-repo sync protocol details (API contract changes, schema renames, etc.
 | Role | Location |
 |------|----------|
 | **Canonical queue** | [Project board](https://github.com/users/synthet/projects/1) |
-| **Issue trackers** | [backend issues](https://github.com/synthet/image-scoring-backend/issues), [gallery issues](https://github.com/synthet/image-scoring-gallery/issues) |
+| **Issue trackers** | [backend issues](https://github.com/synthet/image-scoring-pipeline/issues), [gallery issues](https://github.com/synthet/image-scoring-gallery/issues) |
 | **Pointer (this repo)** | [`TODO.md`](../../TODO.md) |
 | **Pointer (gallery)** | [gallery `TODO.md`](https://github.com/synthet/image-scoring-gallery/blob/main/TODO.md) |
 | **This contract** | here, plus [gallery sibling](https://github.com/synthet/image-scoring-gallery/blob/main/docs/project/00-backlog-workflow.md) |
@@ -22333,7 +22333,7 @@ Bootstrap scripts:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\project\BACKLOG_GOVERNANCE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\project\BACKLOG_GOVERNANCE.md
 # --------------------------------------------------
 
 # Backlog governance (retired alias)
@@ -22347,7 +22347,7 @@ Workflow / Stage contract: [`00-backlog-workflow.md`](00-backlog-workflow.md). T
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\project\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\project\INDEX.md
 # --------------------------------------------------
 
 # Project Planning — Index
@@ -22364,7 +22364,7 @@ Workflow / Stage contract: [`00-backlog-workflow.md`](00-backlog-workflow.md). T
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\project\TODO.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\project\TODO.md
 # --------------------------------------------------
 
 # Project backlog (retired)
@@ -22378,7 +22378,7 @@ Workflow / Stage contract: [`00-backlog-workflow.md`](00-backlog-workflow.md). E
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\raw\README.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\raw\README.md
 # --------------------------------------------------
 
 # Raw Sources
@@ -22390,7 +22390,7 @@ Drop articles, papers, PDFs, images, and other reference material here. Use `/wi
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reference\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reference\INDEX.md
 # --------------------------------------------------
 
 # Reference — Index
@@ -22405,7 +22405,7 @@ Drop articles, papers, PDFs, images, and other reference material here. Use `/wi
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reference\api\API.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reference\api\API.md
 # --------------------------------------------------
 
 # REST API Documentation
@@ -23105,7 +23105,7 @@ curl -X POST http://127.0.0.1:7860/api/scoring/stop
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reference\api\API_SCHEMA_IMPLEMENTATION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reference\api\API_SCHEMA_IMPLEMENTATION.md
 # --------------------------------------------------
 
 # API Schema Implementation Summary
@@ -23275,7 +23275,7 @@ All endpoints should be fully documented with descriptions, examples, and type i
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reference\api\API_SCHEMA_LLM.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reference\api\API_SCHEMA_LLM.md
 # --------------------------------------------------
 
 # API Schema for LLM Agents
@@ -23691,7 +23691,7 @@ The OpenAPI schema includes:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reference\api\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reference\api\INDEX.md
 # --------------------------------------------------
 
 # API Reference — Index
@@ -23709,7 +23709,7 @@ The OpenAPI schema includes:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reference\api\TODO.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reference\api\TODO.md
 # --------------------------------------------------
 
 # API layer — task index (retired)
@@ -23723,7 +23723,7 @@ Workflow / Stage contract: [`docs/project/00-backlog-workflow.md`](../../project
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reference\models\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reference\models\INDEX.md
 # --------------------------------------------------
 
 # Models Reference — Index
@@ -23737,7 +23737,7 @@ Workflow / Stage contract: [`docs/project/00-backlog-workflow.md`](../../project
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reference\models\MODEL_WEIGHTS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reference\models\MODEL_WEIGHTS.md
 # --------------------------------------------------
 
 # Current Model Weights and Scoring Logic
@@ -23777,7 +23777,7 @@ Here are the models and weights currently used in your project to calculate the 
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\CODE_DESIGN_REVIEW_2026-04-18.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\CODE_DESIGN_REVIEW_2026-04-18.md
 # --------------------------------------------------
 
 # Code & Design Review — 2026-04-18
@@ -24151,7 +24151,7 @@ Directly accessing `ReportCollector._pending`, a private list. If the internal s
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\CODE_REVIEW_2026-04-15.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\CODE_REVIEW_2026-04-15.md
 # --------------------------------------------------
 
 # Code Review — 2026-04-15 Changes
@@ -24263,14 +24263,14 @@ This single commit is the main concern of this review. It bundles multiple unrel
 | File | Size | Problem |
 |------|------|---------|
 | `_db_methods.txt` | 32 KB, UTF-16 binary | Dump of db.py method signatures; dev scratch |
-| `analyze_dump.py` | 39 lines | **Contains hardcoded personal path** `c:\Users\dmnsy\.claude\projects\d--Projects-image-scoring-backend\3d8d3903-c0d3-45d9-8a54-73dece21c79c.jsonl` (a Claude Code transcript UUID). Privacy/info-leak. |
+| `analyze_dump.py` | 39 lines | **Contains hardcoded personal path** `c:\Users\dmnsy\.claude\projects\d--Projects-image-scoring-pipeline\3d8d3903-c0d3-45d9-8a54-73dece21c79c.jsonl` (a Claude Code transcript UUID). Privacy/info-leak. |
 | `fix_all_backups_state.json` | 13 lines | Local script state (`H_junk: done`, `H_meta_z6ii: failed`...). Should be runtime state, not tracked. |
 | `docker_refresh_db.bat` | 48 lines | Local dev convenience; may be legitimate but add to `tools/` with a README entry, not repo root. |
-| `image-scoring-backend.sln` | 47 lines | Visual Studio solution file — fine if the team uses VS, but add to repo-root conventions doc or move to `.ide/`. |
+| `image-scoring-pipeline.sln` | 47 lines | Visual Studio solution file — fine if the team uses VS, but add to repo-root conventions doc or move to `.ide/`. |
 | `artifact/scratch/break_image*.py`, `test_neighbors.py`, `verify_policy.py` | ~90 lines | Throwaway scripts. `artifact/` is not an established repo convention. |
 | `scratch/check_folder_state.py`, `test_db_format.py`, `verify_audit.py`, `verify_final_checks.py`, `verify_repair.py` | ~250 lines | All clearly dev scratch. `scratch/` directory had no prior tracked content. |
 
-**Recommendation:** Cherry-pick the `workflow_healing.py` refactor into a dedicated PR with a real commit message. File `git rm` PRs for `_db_methods.txt`, `analyze_dump.py`, `fix_all_backups_state.json`, `scratch/`, `artifact/scratch/`. Either justify `docker_refresh_db.bat` and `image-scoring-backend.sln` with a README note or remove them too.
+**Recommendation:** Cherry-pick the `workflow_healing.py` refactor into a dedicated PR with a real commit message. File `git rm` PRs for `_db_methods.txt`, `analyze_dump.py`, `fix_all_backups_state.json`, `scratch/`, `artifact/scratch/`. Either justify `docker_refresh_db.bat` and `image-scoring-pipeline.sln` with a README note or remove them too.
 
 ### 10. Release commits v7.3.0 / v7.4.0 — `[blocker]`
 
@@ -24316,7 +24316,7 @@ The day's functional changes are net-positive and mostly defensible. The process
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\CULLING_NO_STACKS_INVESTIGATION_2026-03-15.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\CULLING_NO_STACKS_INVESTIGATION_2026-03-15.md
 # --------------------------------------------------
 
 # Culling “Done” but No Stacks (2026-03)
@@ -24355,7 +24355,7 @@ After deploying the fix, affected folders may need **Force Rescan** on culling s
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\DEBUGGING_SESSIONS_HUB.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\DEBUGGING_SESSIONS_HUB.md
 # --------------------------------------------------
 
 # Debugging sessions (historical hub)
@@ -24380,7 +24380,7 @@ Gradio routing, fullscreen image display, and related WebUI investigations. Thes
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\DEEP_RESEARCH_REPORT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\DEEP_RESEARCH_REPORT.md
 # --------------------------------------------------
 
 # Executive Summary  
@@ -24559,7 +24559,7 @@ timeline
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\GRADIO_SERVING_DECISION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\GRADIO_SERVING_DECISION.md
 # --------------------------------------------------
 
 # Gradio Serving Decision
@@ -24590,7 +24590,7 @@ Move inference behind a dedicated serving layer if external clients, strict API-
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\IAA_MODELS_LOCAL_DEPLOYMENT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\IAA_MODELS_LOCAL_DEPLOYMENT.md
 # --------------------------------------------------
 
 # Modern Image Aesthetic Quality Assessment Models (Local Deployment Ready)
@@ -24785,7 +24785,7 @@ https://github.com/KeiChiTse/QPT-V2
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\IAA_MODELS_SURVEY_2024_2025.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\IAA_MODELS_SURVEY_2024_2025.md
 # --------------------------------------------------
 
 # Local Image Aesthetic Quality Assessment Models (2024–2025)
@@ -25138,7 +25138,7 @@ https://q-align.github.io/
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\IAA_PAPER_ANALYSIS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\IAA_PAPER_ANALYSIS.md
 # --------------------------------------------------
 
 # Analysis of "Modern Image Aesthetic Quality Assessment Models"
@@ -25213,7 +25213,7 @@ The PDF confirms that while **MUSIQ** is a solid baseline, the field has moved f
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\INDEX.md
 # --------------------------------------------------
 
 # Reports — Index
@@ -25280,7 +25280,7 @@ Superseded or snapshot-only; kept under [`../archive/reports/`](../archive/repor
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\PARTNER_UPDATES.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\PARTNER_UPDATES.md
 # --------------------------------------------------
 
 # Partner Agent Updates
@@ -25296,12 +25296,12 @@ This file logs updates received from other agents (e.g., `electron-gallery.agent
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\RELEASE_HANDOFF_2026-04-10_2026-04-11.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\RELEASE_HANDOFF_2026-04-10_2026-04-11.md
 # --------------------------------------------------
 
 # Release handoff — 2026-04-10 → 2026-04-11
 
-This document summarizes **features, behavior changes, and bugfixes** shipped in **image-scoring-backend** and **image-scoring-gallery** based on **git history** and **CHANGELOG** entries for releases cut on **2026-04-10** and **2026-04-11**. It is a **dated snapshot** (release / handoff spec for operators and client apps), not a living architecture doc.
+This document summarizes **features, behavior changes, and bugfixes** shipped in **image-scoring-pipeline** and **image-scoring-gallery** based on **git history** and **CHANGELOG** entries for releases cut on **2026-04-10** and **2026-04-11**. It is a **dated snapshot** (release / handoff spec for operators and client apps), not a living architecture doc.
 
 **Former filename:** `docs/project/SPECS_LAST_48H_2026-04-10_2026-04-11.md` (moved here 2026-04-13).
 
@@ -25311,12 +25311,12 @@ This document summarizes **features, behavior changes, and bugfixes** shipped in
 
 | Repository | Version span (this window) | Notes |
 |------------|----------------------------|--------|
-| **image-scoring-backend** | **6.8.0** → **6.9.2** | Python API, pipeline, DB, React `/ui` static bundle |
+| **image-scoring-pipeline** | **6.8.0** → **6.9.2** | Python API, pipeline, DB, React `/ui` static bundle |
 | **image-scoring-gallery** | **5.4.5** → **5.6.0** (see changelog; patch lines include dev-only **5.4.6**) | Electron app, `electron/db.ts`, React UI |
 
 ---
 
-## image-scoring-backend
+## image-scoring-pipeline
 
 ### 6.8.0 — RAW / ML input & phase parsing
 
@@ -25539,7 +25539,7 @@ Catalog below uses one pattern throughout: **Name** — What it does. *Call / be
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\RUN_ORCHESTRATION_AUDIT_2026-04-17.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\RUN_ORCHESTRATION_AUDIT_2026-04-17.md
 # --------------------------------------------------
 
 # Run Orchestration Audit — 2026-04-17
@@ -25672,7 +25672,7 @@ Snapshot of bugs, defects, and gaps in job/run orchestration derived from `webui
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\SECURITY_FIXES_2026_04_19.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\SECURITY_FIXES_2026_04_19.md
 # --------------------------------------------------
 
 # Security & Architecture Fixes — April 19, 2026
@@ -26037,7 +26037,7 @@ modules/db/
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\UI_RUNS_CODE_REVIEW_2026-04-18.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\UI_RUNS_CODE_REVIEW_2026-04-18.md
 # --------------------------------------------------
 
 # /ui/runs — Deep Code & Design Review (2026-04-18)
@@ -26386,7 +26386,7 @@ modules/db/
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\WORK_SUMMARY_2026-03-08.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\WORK_SUMMARY_2026-03-08.md
 # --------------------------------------------------
 
 # Work Summary — 2026-03-08
@@ -26518,7 +26518,7 @@ All described changes are implemented and consistent across Electron and Python.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\project-reviews\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\project-reviews\INDEX.md
 # --------------------------------------------------
 
 # Project Reviews — Index
@@ -26534,7 +26534,7 @@ All described changes are implemented and consistent across Electron and Python.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\project-reviews\PROJECT_REVIEW_2026-01-31.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\project-reviews\PROJECT_REVIEW_2026-01-31.md
 # --------------------------------------------------
 
 ## Project review (code + design)
@@ -26769,7 +26769,7 @@ Right now, â€œboundariesâ€ are **mostly by convention**. For example:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\project-reviews\PROJECT_REVIEW_DETAILED_2026-01-31.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\project-reviews\PROJECT_REVIEW_DETAILED_2026-01-31.md
 # --------------------------------------------------
 
 ## Project review deep dive (topic-by-topic)
@@ -27152,7 +27152,7 @@ Lack of a cohesive test suite (`tests/` contains ad-hoc scripts).
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\project-reviews\UNFINISHED_BUSINESS_EVALUATION_2026-03-14.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\project-reviews\UNFINISHED_BUSINESS_EVALUATION_2026-03-14.md
 # --------------------------------------------------
 
 # Unfinished Business & TODO Evaluation (2026-03-14)
@@ -27346,7 +27346,7 @@ This sequence provides quick reliability gains while creating momentum on the mo
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reports\project-reviews\UX_UI_REVIEW_2026-03-12.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reports\project-reviews\UX_UI_REVIEW_2026-03-12.md
 # --------------------------------------------------
 
 # UX/UI Review — WebUI (2026-03-12)
@@ -27509,7 +27509,7 @@ Implement P0 as a small UX hardening sprint, then run a 30-minute usability sess
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\reviews\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\reviews\INDEX.md
 # --------------------------------------------------
 
 # Reviews — Index
@@ -27525,22 +27525,22 @@ Reviews live under [`../reports/`](../reports/INDEX.md). Older snapshots were mo
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\AGENT_COORDINATION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\AGENT_COORDINATION.md
 # --------------------------------------------------
 
 # Agent Coordination: Integration Guide
 
-This document defines the coordination protocols for AI agents working across **[image-scoring-backend](https://github.com/synthet/image-scoring-backend)** (Python backend) and **[image-scoring-gallery](https://github.com/synthet/image-scoring-gallery)** (Electron gallery).
+This document defines the coordination protocols for AI agents working across **[image-scoring-pipeline](https://github.com/synthet/image-scoring-pipeline)** (Python backend) and **[image-scoring-gallery](https://github.com/synthet/image-scoring-gallery)** (Electron gallery).
 
 ## 🏗️ Architectural Overview
 
 The integration relies on two primary shared components:
 
 1. **Shared database: PostgreSQL + pgvector** (primary path; e.g. local Docker).
-   * **Owner**: **image-scoring-backend** defines the schema in `modules/db_postgres.py` and versioned migrations via Alembic.
+   * **Owner**: **image-scoring-pipeline** defines the schema in `modules/db_postgres.py` and versioned migrations via Alembic.
    * **Consumer**: **image-scoring-gallery** queries via `pg` (node-postgres) or `ApiConnector` (HTTP SQL to the backend), depending on configuration.
 2. **Service interface: FastAPI** (default port `7860`).
-   * **Provider**: **image-scoring-backend** exposes endpoints for scoring, tagging, and clustering.
+   * **Provider**: **image-scoring-pipeline** exposes endpoints for scoring, tagging, and clustering.
    * **Consumer**: **image-scoring-gallery** triggers jobs via this API.
 
 **Legacy:** Historical Firebird usage and migration decisions are documented in [FIREBIRD_POSTGRES_MIGRATION.md](../planning/database/FIREBIRD_POSTGRES_MIGRATION.md). Current production paths are PostgreSQL (backend schema + Alembic; gallery `pg` / `api` connectors).
@@ -27548,7 +27548,7 @@ The integration relies on two primary shared components:
 ## 🤝 Coordination Protocols
 
 ### 1. Schema Changes
-* **Protocol**: Database schema changes MUST be implemented in **image-scoring-backend** first (Alembic migrations).
+* **Protocol**: Database schema changes MUST be implemented in **image-scoring-pipeline** first (Alembic migrations).
 * **Agent Action**: The backend agent should notify the gallery agent (or the user) of any column additions, removals, or type changes.
 * **Sync Point**: The gallery agent must update `electron/db.ts` to reflect the new schema in query logic. Impact notes for the gallery live in [DATABASE_REFACTOR_ANALYSIS.md](https://github.com/synthet/image-scoring-gallery/blob/main/docs/technical/DATABASE_REFACTOR_ANALYSIS.md) (**image-scoring-gallery**).
 
@@ -27558,7 +27558,7 @@ The integration relies on two primary shared components:
 * **Sync Point**: The gallery agent must update `electron/apiService.ts` and relevant frontend hooks.
 
 ### 3. Shared Resource Configuration
-* **Protocol**: **image-scoring-gallery** `config.json` references API URL, database connection, or paths that pair with **image-scoring-backend** deployment.
+* **Protocol**: **image-scoring-gallery** `config.json` references API URL, database connection, or paths that pair with **image-scoring-pipeline** deployment.
 * **Agent Action**: Moving the database container, changing credentials, or changing API base URL requires updates in both projects as applicable.
 
 ### 4. Keyword Schema Migration (Phase 4)
@@ -27604,7 +27604,7 @@ The workflow posts (and idempotently updates) a comment listing the gallery file
 
 ## 🔍 Troubleshooting with MCP
 
-Agents use **stdio** MCP against the Python backend: **`imgscore-py-stdio`** in the **image-scoring-backend** workspace; **`imgscore-el-stdio`** in **image-scoring-gallery** (same server, different `cwd`). For WebUI / **`execute_code`**, enable **`imgscore-py-sse`** or **`imgscore-el-sse`** (unique keys, same URL). Use these to diagnose cross-project issues:
+Agents use **stdio** MCP against the Python backend: **`imgscore-py-stdio`** in the **image-scoring-pipeline** workspace; **`imgscore-el-stdio`** in **image-scoring-gallery** (same server, different `cwd`). For WebUI / **`execute_code`**, enable **`imgscore-py-sse`** or **`imgscore-el-sse`** (unique keys, same URL). Use these to diagnose cross-project issues:
 
 | Tool | Usage in Coordination |
 |------|------------------------|
@@ -27615,12 +27615,12 @@ Agents use **stdio** MCP against the Python backend: **`imgscore-py-stdio`** in 
 
 ## 📚 Maintenance
 
-Keep this document and `AGENTS.md` in both repositories aligned after any major integration refactor. **Canonical copy:** this file in **image-scoring-backend** ([`docs/technical/AGENT_COORDINATION.md` on GitHub](https://github.com/synthet/image-scoring-backend/blob/main/docs/technical/AGENT_COORDINATION.md)).
+Keep this document and `AGENTS.md` in both repositories aligned after any major integration refactor. **Canonical copy:** this file in **image-scoring-pipeline** ([`docs/technical/AGENT_COORDINATION.md` on GitHub](https://github.com/synthet/image-scoring-pipeline/blob/main/docs/technical/AGENT_COORDINATION.md)).
 
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\ANALYSIS_SCRIPT_DOCUMENTATION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\ANALYSIS_SCRIPT_DOCUMENTATION.md
 # --------------------------------------------------
 
 # MUSIQ Results Analysis Script
@@ -27837,7 +27837,7 @@ The analysis script provides comprehensive insights into your image collection's
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\API_CONTRACT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\API_CONTRACT.md
 # --------------------------------------------------
 
 # API Contract Summary
@@ -28195,7 +28195,7 @@ Now includes `clustering` runner state:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\BIRD_SPECIES_WALKTHROUGH.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\BIRD_SPECIES_WALKTHROUGH.md
 # --------------------------------------------------
 
 # Bird Species Classification — Walkthrough
@@ -28693,7 +28693,7 @@ SKIP_TEST_DB_SETUP=1 pytest tests/test_bird_species.py -v -m "not ml"
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\CLI_TUI_SUMMARY.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\CLI_TUI_SUMMARY.md
 # --------------------------------------------------
 
 # CLI and TUI Options Summary
@@ -28816,7 +28816,7 @@ The CLI does not use `event_manager` or asyncio. Direct attribute polling is sim
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\CULLING_FEATURE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\CULLING_FEATURE.md
 # --------------------------------------------------
 
 # AI Culling Feature - Technical Documentation
@@ -29047,7 +29047,7 @@ def get_session_stats(session_id) -> dict
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\CULLING_REWORK_DESIGN_REVIEW.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\CULLING_REWORK_DESIGN_REVIEW.md
 # --------------------------------------------------
 
 # Design & Code Review: AI Culling Feature Rework
@@ -29373,7 +29373,7 @@ The rework is **well-architected** and **mostly correct**, but has **one critica
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\DB_RECOVERY_FROM_CORRUPTION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\DB_RECOVERY_FROM_CORRUPTION.md
 # --------------------------------------------------
 
 # Database Recovery from Corruption
@@ -29474,7 +29474,7 @@ A merge script can be added later to automate INSERTs from the exported JSON. Fo
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\DB_SCHEMA.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\DB_SCHEMA.md
 # --------------------------------------------------
 
 # Firebird Database Schema
@@ -29799,7 +29799,7 @@ Tracks last clustering run per folder.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\EMBEDDINGS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\EMBEDDINGS.md
 # --------------------------------------------------
 
 # Image embeddings (MobileNetV2, Postgres, backfill)
@@ -29931,7 +29931,7 @@ The `embeddings` section in `config.json` gates per-model persistence and pins t
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\FIREBIRD_WINDOWS_TEMPDIR.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\FIREBIRD_WINDOWS_TEMPDIR.md
 # --------------------------------------------------
 
 # Firebird on Windows: sort temp directory (`fb_sort_*` errors)
@@ -29945,13 +29945,13 @@ Queries that need a large sort (for example `ORDER BY` over many rows) fail with
 
 ## Cause
 
-The Firebird server writes temporary sort files under **`TempDirectories`** in `Firebird/firebird.conf`. If that path is missing, not writable, or points at an **old clone path** (for example after renaming `image-scoring` → `image-scoring-backend`), the engine cannot create `fb_sort_*` files.
+The Firebird server writes temporary sort files under **`TempDirectories`** in `Firebird/firebird.conf`. If that path is missing, not writable, or points at an **old clone path** (for example after renaming `image-scoring` → `image-scoring-pipeline`), the engine cannot create `fb_sort_*` files.
 
 ## Fix
 
 1. Open `Firebird/firebird.conf` next to `firebird.exe` (used by `run_firebird.bat`).
 2. Set **`TempDirectories`** to a directory that exists and is writable:
-   - **Explicit (safest after renaming the repo folder):** e.g. `TempDirectories = X:/path/to/image-scoring-backend/Firebird/temp`  
+   - **Explicit (safest after renaming the repo folder):** e.g. `TempDirectories = X:/path/to/image-scoring-pipeline/Firebird/temp`  
      Use forward slashes; point at **`Firebird\temp`** under your **current** backend root — not an old clone path if that folder no longer exists.
    - **Portable:** `TempDirectories = temp` — resolved relative to this Firebird install directory (the folder that contains `firebird.exe`).
 3. Ensure the **`Firebird\temp`** folder exists (`run_firebird.bat` creates it).
@@ -29959,7 +29959,7 @@ The Firebird server writes temporary sort files under **`TempDirectories`** in `
 
 ### If the error still names an old clone path
 
-That path is almost always the **previous** config still in memory, or a second Firebird started from an old copy. Stop **all** `firebird.exe` instances, confirm `firebird.conf` uses your real backend path, then start **`image-scoring-backend\run_firebird.bat`** again.
+That path is almost always the **previous** config still in memory, or a second Firebird started from an old copy. Stop **all** `firebird.exe` instances, confirm `firebird.conf` uses your real backend path, then start **`image-scoring-pipeline\run_firebird.bat`** again.
 
 ## Related
 
@@ -29968,7 +29968,7 @@ That path is almost always the **previous** config still in memory, or a second 
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\GRADIO_UI_UX_SPEC_FOR_ELECTRON_MIGRATION.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\GRADIO_UI_UX_SPEC_FOR_ELECTRON_MIGRATION.md
 # --------------------------------------------------
 
 # Gradio WebUI UX/UI Specification (Current State)
@@ -30428,7 +30428,7 @@ Connect once on app start. The server broadcasts JSON messages for all job lifec
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\INBROWSER_RAW_PREVIEW.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\INBROWSER_RAW_PREVIEW.md
 # --------------------------------------------------
 
 # In-Browser RAW Preview (LibRaw Integration)
@@ -30544,7 +30544,7 @@ static/
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\INDEX.md
 # --------------------------------------------------
 
 # Technical — Index
@@ -30625,7 +30625,7 @@ High-level overviews and diagrams live under [`../architecture/`](../architectur
 
 | Document / topic | Description |
 |------------------|-------------|
-| [AGENT_COORDINATION.md](AGENT_COORDINATION.md) | Integration protocols with **image-scoring-gallery** ([canonical on GitHub](https://github.com/synthet/image-scoring-backend/blob/main/docs/technical/AGENT_COORDINATION.md)) |
+| [AGENT_COORDINATION.md](AGENT_COORDINATION.md) | Integration protocols with **image-scoring-gallery** ([canonical on GitHub](https://github.com/synthet/image-scoring-pipeline/blob/main/docs/technical/AGENT_COORDINATION.md)) |
 | [CROSS_APP_INTEGRATION_AUDIT.md](../testing/CROSS_APP_INTEGRATION_AUDIT.md) | Automated integration coverage between backend and gallery |
 
 **See also:** [Main docs index](../INDEX.md) · [reference/models/](../reference/models/INDEX.md) · [reference/api/](../reference/api/INDEX.md) · [planning/](../planning/INDEX.md) · [image-scoring-gallery docs](https://github.com/synthet/image-scoring-gallery/blob/main/docs/README.md)
@@ -30633,7 +30633,7 @@ High-level overviews and diagrams live under [`../architecture/`](../architectur
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\JOBS_PIPELINE_REDESIGN_SPEC.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\JOBS_PIPELINE_REDESIGN_SPEC.md
 # --------------------------------------------------
 
 # Jobs Pipeline Redesign Spec (Refined to Current Codebase)
@@ -30850,7 +30850,7 @@ Existing endpoints (`/scoring/start`, `/tagging/start`, `/clustering/start`, `/p
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\KEYWORD_EXTRACTION_GUIDE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\KEYWORD_EXTRACTION_GUIDE.md
 # --------------------------------------------------
 
 # Keyword Extraction Tool
@@ -31074,7 +31074,7 @@ This tool is part of the image-scoring project. See the main project license for
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\LAZY_LOAD_DESIGN.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\LAZY_LOAD_DESIGN.md
 # --------------------------------------------------
 
 # Design & Code Review: Lazy Load Full Resolution Images
@@ -31219,7 +31219,7 @@ function loadFullResolution(imgPath, previewId, imgElement) {
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\LAZY_LOAD_DESIGN_REVIEW.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\LAZY_LOAD_DESIGN_REVIEW.md
 # --------------------------------------------------
 
 # Design & Code Review: Lazy Load Full Resolution Images
@@ -31480,7 +31480,7 @@ The lazy loading feature is a valuable addition that significantly improves perf
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\MCP_DEBUGGING_TOOLS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\MCP_DEBUGGING_TOOLS.md
 # --------------------------------------------------
 
 # MCP Debugging Tools for Cursor
@@ -31528,7 +31528,7 @@ Add the following to your Cursor MCP settings (Settings → MCP → Add Server):
 }
 ```
 
-When the Cursor workspace is **image-scoring-gallery**, use the same `command` / `args` but name the server **`imgscore-el-stdio`** and set `cwd` / `PYTHONPATH` to your **image-scoring-backend** checkout path. For WebUI / `execute_code`, register **`imgscore-el-sse`** (or **`imgscore-py-sse`** in the Python workspace) with the `url` from `GET /mcp-status`.
+When the Cursor workspace is **image-scoring-gallery**, use the same `command` / `args` but name the server **`imgscore-el-stdio`** and set `cwd` / `PYTHONPATH` to your **image-scoring-pipeline** checkout path. For WebUI / `execute_code`, register **`imgscore-el-sse`** (or **`imgscore-py-sse`** in the Python workspace) with the `url` from `GET /mcp-status`.
 
 ### Option 2: Project Config File
 
@@ -32089,7 +32089,7 @@ Tool count: **51**
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\MODELS_SUMMARY.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\MODELS_SUMMARY.md
 # --------------------------------------------------
 
 # Model Summary
@@ -32133,7 +32133,7 @@ Originally integrated for semantic scoring, but removed due to persistent instab
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\MODEL_INPUT_SPECIFICATIONS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\MODEL_INPUT_SPECIFICATIONS.md
 # --------------------------------------------------
 
 # Model Input Specifications
@@ -32331,7 +32331,7 @@ To use different resolution per model (e.g. 384 for SPAQ/AVA, 518 for LIQE), the
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\MODEL_SOURCE_TESTING.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\MODEL_SOURCE_TESTING.md
 # --------------------------------------------------
 
 # Model Source Testing Guide
@@ -32757,7 +32757,7 @@ The test script uses emoji indicators:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\MULTI_MODEL_SCORING.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\MULTI_MODEL_SCORING.md
 # --------------------------------------------------
 
 # MUSIQ Multi-Model Image Quality Assessment
@@ -32915,7 +32915,7 @@ The normalized scores allow comparison across models:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\NEF_FORMAT_REFERENCE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\NEF_FORMAT_REFERENCE.md
 # --------------------------------------------------
 
 # Nikon NEF — format notes (reference)
@@ -33006,13 +33006,13 @@ Application code in this repo **does not** unpack CFA data. For completeness:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\NEF_IMPLEMENTATION_REVIEW.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\NEF_IMPLEMENTATION_REVIEW.md
 # --------------------------------------------------
 
 # NEF handling — implementation review
 
 **Date:** 2026-04-13  
-**Scope:** How **image-scoring-backend** and **image-scoring-gallery** read **Nikon NEF** files for previews, thumbnails, and ML-facing rasterization—reviewed against the structural notes in [`NEF_FORMAT_REFERENCE.md`](./NEF_FORMAT_REFERENCE.md).
+**Scope:** How **image-scoring-pipeline** and **image-scoring-gallery** read **Nikon NEF** files for previews, thumbnails, and ML-facing rasterization—reviewed against the structural notes in [`NEF_FORMAT_REFERENCE.md`](./NEF_FORMAT_REFERENCE.md).
 
 **Support goal:** Reliable behavior for **D90**, **D300**, **Z 6II**, and **Z 8** (embedded preview and delegated raw decode).
 
@@ -33025,7 +33025,7 @@ Application code in this repo **does not** unpack CFA data. For completeness:
 
 ---
 
-## image-scoring-backend
+## image-scoring-pipeline
 
 ### `modules/thumbnails.py`
 
@@ -33096,9 +33096,9 @@ Application code in this repo **does not** unpack CFA data. For completeness:
 
 | Location | Responsibility |
 |----------|----------------|
-| `image-scoring-backend/modules/thumbnails.py` | Embedded JPEG, thumbnails, previews, ML open |
-| `image-scoring-backend/modules/api.py` | `GET /raw-preview` |
-| `image-scoring-backend/modules/ui/assets.py` | Gradio `NefViewer` JS (fallback extraction) |
+| `image-scoring-pipeline/modules/thumbnails.py` | Embedded JPEG, thumbnails, previews, ML open |
+| `image-scoring-pipeline/modules/api.py` | `GET /raw-preview` |
+| `image-scoring-pipeline/modules/ui/assets.py` | Gradio `NefViewer` JS (fallback extraction) |
 | `image-scoring-gallery/electron/nefExtractor.ts` | ExifTool extraction in Electron |
 | `image-scoring-gallery/electron/main.ts` | IPC `nef:extract-preview` |
 | `image-scoring-gallery/src/utils/nefViewer.ts` | Tiered client fallbacks |
@@ -33106,7 +33106,7 @@ Application code in this repo **does not** unpack CFA data. For completeness:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\PIPELINE_PHASE_RUNNERS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\PIPELINE_PHASE_RUNNERS.md
 # --------------------------------------------------
 
 # Pipeline Phases and Runners
@@ -33432,7 +33432,7 @@ Main files involved:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\PIPELINE_TERMINOLOGY.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\PIPELINE_TERMINOLOGY.md
 # --------------------------------------------------
 
 # Pipeline terminology (Gradio, Vite UI, API, DB)
@@ -33487,7 +33487,7 @@ These are **not** the same as stage titles; UIs should map them when showing not
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\RAW_PROCESSING_GUIDE.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\RAW_PROCESSING_GUIDE.md
 # --------------------------------------------------
 
 # RAW File Processing Guide
@@ -33740,7 +33740,7 @@ python scripts/python/test_nef_rating.py --nef-file "D:/Photos/test.NEF" --ratin
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\RUNS_QUEUE_AND_RESTART.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\RUNS_QUEUE_AND_RESTART.md
 # --------------------------------------------------
 
 # Runs queue and application restart
@@ -33855,7 +33855,7 @@ Diagnostics: MCP **`get_stale_running_phase_status`** lists long-**`running`** `
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\RUNS_WALKTHROUGH.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\RUNS_WALKTHROUGH.md
 # --------------------------------------------------
 
 # Runs walkthrough
@@ -34042,7 +34042,7 @@ Details: **[RUNS_QUEUE_AND_RESTART.md](RUNS_QUEUE_AND_RESTART.md)**.
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\SCORING_CHANGES.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\SCORING_CHANGES.md
 # --------------------------------------------------
 
 # Vexlum pipeline V2: Changes Summary
@@ -34093,7 +34093,7 @@ To ensure consistency with the models' training data and optimal inference perfo
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\spec_vector_db_visualization.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\spec_vector_db_visualization.md
 # --------------------------------------------------
 
 # Vector DB Visualization (Legacy Specification)
@@ -34150,7 +34150,7 @@ The projection process follows these steps:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\STACKS_MANUAL_MANAGEMENT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\STACKS_MANUAL_MANAGEMENT.md
 # --------------------------------------------------
 
 # Stacks UX Manual Management - Design Document
@@ -34409,7 +34409,7 @@ Per the original UX review, remaining items:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\WEIGHTED_SCORING_STRATEGY.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\WEIGHTED_SCORING_STRATEGY.md
 # --------------------------------------------------
 
 # Weighted Scoring Strategy (Hybrid Pipeline)
@@ -34471,7 +34471,7 @@ The final "Representative Score" is a weighted average of 5 models:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\technical\WORKFLOW_STAGES_ANALYSIS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\technical\WORKFLOW_STAGES_ANALYSIS.md
 # --------------------------------------------------
 
 # Vexlum Scoring — workflow architecture
@@ -34611,7 +34611,7 @@ To establish a rigid state machine where each phase handles triggers, processing
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\testing\AUTOMATED_VS_MANUAL_CHECKS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\testing\AUTOMATED_VS_MANUAL_CHECKS.md
 # --------------------------------------------------
 
 # Automated tests vs manual checks
@@ -34653,18 +34653,18 @@ RUN_MANUAL_DB_PROBE=1 pytest tests/test_probe.py -q
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\testing\CROSS_APP_INTEGRATION_AUDIT.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\testing\CROSS_APP_INTEGRATION_AUDIT.md
 # --------------------------------------------------
 
 # Cross-App Integration Audit
 
 Date: 2026-03-15
 
-This audit evaluates the current automated integration coverage between the Python backend (**image-scoring-backend**) and the sibling Electron frontend (**image-scoring-gallery**).
+This audit evaluates the current automated integration coverage between the Python backend (**image-scoring-pipeline**) and the sibling Electron frontend (**image-scoring-gallery**).
 
 Target environment:
 - Local Windows developer workflow
-- Sibling repo layout: **image-scoring-backend** and **image-scoring-gallery** (paths on disk vary)
+- Sibling repo layout: **image-scoring-pipeline** and **image-scoring-gallery** (paths on disk vary)
 - Shared Firebird database plus backend REST/WebSocket interfaces
 
 This is not a new end-to-end harness. It is a coverage audit, a list of verified failures, and a minimum next-step test matrix.
@@ -34921,7 +34921,7 @@ The backend smoke check is **non-blocking by default** (reported as `WARN` on fa
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\testing\INDEX.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\testing\INDEX.md
 # --------------------------------------------------
 
 # Testing — Index
@@ -34939,7 +34939,7 @@ The backend smoke check is **non-blocking by default** (reported as `WARN` on fa
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\testing\TEST_IMPROVEMENTS_PLAN.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\testing\TEST_IMPROVEMENTS_PLAN.md
 # --------------------------------------------------
 
 # Test Coverage Improvements Plan
@@ -35202,7 +35202,7 @@ python -m pytest -m "not gpu and not ml and not network" -v
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\testing\TEST_STATUS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\testing\TEST_STATUS.md
 # --------------------------------------------------
 
 # Unit Test Status
@@ -35282,7 +35282,7 @@ The test suite is split into:
 
 
 # --------------------------------------------------
-# FILE: D:\Projects\image-scoring-backend\docs\testing\WSL_TESTS.md
+# FILE: D:\Projects\image-scoring-pipeline\docs\testing\WSL_TESTS.md
 # --------------------------------------------------
 
 ## WSL-only tests

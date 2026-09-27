@@ -26,9 +26,9 @@ okf_version: 0.1
 | **Model** | Opus 5 — `claude-opus-5` |
 | **Record written** | 2026-08-05 21:46:44 −0500 |
 | **Work dates covered** | 2026-08-01 → 2026-08-05 (one continued session, context compacted twice) |
-| **Repository** | `image-scoring-backend`, branch `master` |
-| **Working directory** | `D:\Projects\image-scoring-backend` |
-| **Related issue** | [#317](https://github.com/synthet/image-scoring-backend/issues/317) |
+| **Repository** | `image-scoring-pipeline`, branch `master` |
+| **Working directory** | `D:\Projects\image-scoring-pipeline` |
+| **Related issue** | [#317](https://github.com/synthet/image-scoring-pipeline/issues/317) |
 | **Commit state at write time** | **all work uncommitted**; `scripts/research/bird_crop/` untracked since before the session |
 
 ## What was asked, in order
